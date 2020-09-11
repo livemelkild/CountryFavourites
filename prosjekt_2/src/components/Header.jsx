@@ -2,7 +2,7 @@ import React from "react"
 
 function Header() {
     return(
-        <h2>Hei du</h2>
+        <h2>Live sin header</h2>
     )
 }
 
