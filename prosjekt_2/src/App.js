@@ -10,7 +10,6 @@ function App() {
           <Country
           name = "Colombia"
           description = "Teste Colombia"
-          img = "https://no.wikipedia.org/wiki/Colombia#/media/Fil:Flag_of_Colombia.svg"
           />
           <Country
           name = "Norway"
@@ -24,7 +23,6 @@ function App() {
           name = "Norway"
           description = "Teste Norway"
           />
-          
 
     </div>
   );
