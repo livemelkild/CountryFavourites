@@ -2,7 +2,7 @@ import React from "react"
 
 function Header() {
     return(
-        <h2>Live sin header</h2>
+        <header> <h1> Hvilket land vil du reise til? </h1></header>
     )
 }
 

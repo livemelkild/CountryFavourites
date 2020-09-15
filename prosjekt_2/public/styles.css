@@ -1,0 +1,56 @@
+
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  background-color: #99f3bd;
+  color: #ff5722;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+  text-align: center;
+  background: #fabea7;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 1000px;
+  margin: 16px;
+  float: center;
+}
+
+.country{
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+  display: gird;
+  grid-template-columns: 20% 20% 20% 40%;
+  grid-row-gap: 20em;
+}
+
+.country h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  font-family: "McLaren", cursive;
+  text-align: center;
+}
+
+.country p {
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+}
+.circle-img {
+  border-radius: 50%;
+  border; 7px soild #fff;
+  width: 120px;
+  height: 120px;
+}
