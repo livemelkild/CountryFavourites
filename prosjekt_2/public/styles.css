@@ -1,8 +1,6 @@
 
 
 header {
-  display: grid;
-  grid-template-columns: 1fr;
 
   background-color: #99f3bd;
   color: #ff5722;
@@ -16,6 +14,9 @@ header {
   width: 1000px;
   margin: 16px;
   float: center;
+
+  display: grid;
+  grid-template-columns: 100%;
 }
 
 .country{
