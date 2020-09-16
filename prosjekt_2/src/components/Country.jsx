@@ -5,7 +5,7 @@ function Country(props) {
     <div className = "country">
       <h1>{props.name}</h1>
       <p> {props.description}</p>
-      <img {props.logo}  />
+      <image> {props.logo}  </image>
     </div>
   )
 }
