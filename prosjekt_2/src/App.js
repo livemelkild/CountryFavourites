@@ -6,24 +6,40 @@ function App() {
   return (
     <div>
           <Header />
-
-          <Country
-          name = "Colombia"
-          description = "Teste Colombia"
-          />
-          <Country
-          name = "Norway"
-          description = "Teste Norway"
-          />
-          <Country
-          name = "Italy"
-          description = "Teste Italy"
-          />
-          <Country
-          name = "Norway"
-          description = "Teste Norway"
-          />
-
+          <div className = "wrapper">
+            <Country
+            name = "Colombia"
+            description = "Teste Colombia"
+            />
+            <Country
+            name = "Norway"
+            description = "Teste Norway"
+            />
+            <Country
+            name = "Italy"
+            description = "Teste Italy"
+            />
+            <Country
+            name = "Norway"
+            description = "Teste Norway"
+            />
+            <Country
+            name = "Colombia"
+            description = "Teste Colombia"
+            />
+            <Country
+            name = "Norway"
+            description = "Teste Norway"
+            />
+            <Country
+            name = "Italy"
+            description = "Teste Italy"
+            />
+            <Country
+            name = "Norway"
+            description = "Teste Norway"
+            />
+          </div>
     </div>
   );
 };

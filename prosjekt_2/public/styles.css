@@ -11,12 +11,10 @@ header {
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
   margin: 16px;
+
 }
 
-wrapper {
-  display: grid;
-  grid-template-columns: 30%;
-}
+
 
 .country{
   background: #fff;
@@ -25,6 +23,7 @@ wrapper {
   padding: 10px;
   margin: 16px;
   float: left;
+  width: 250px;
 }
 
 .country h1 {
