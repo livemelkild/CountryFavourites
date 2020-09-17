@@ -19,15 +19,26 @@ function Country_spec(){
     const [img, setImage] = useState(false)
 
     function swapImage() {
-      console.log("hi");
-        if( img === false) {
-          img_1 = "/Image/viking.svg"
+        if( img === true) {
+          console.log("italia");
         }
     }
     function swapImage2() {
-      console.log("hello");
         if( img === true) {
-          img_2 = liste_2[0]
+          img_2 = liste_2[1]
+          console.log("norge");
+        }
+    }
+    function swapImage3() {
+        if( img === true) {
+          img_2 = liste_2[2]
+          console.log("portogal");
+        }
+    }
+    function swapImage4() {
+        if( img === true) {
+          img_2 = liste_2[3]
+          console.log("hellas");
         }
     }
 
@@ -63,7 +74,7 @@ function Country_spec(){
                 img = {img_3}
                 onClick = {() => {
                   setImage(!img);
-                  swapImage2();
+                  swapImage3();
               }}
           />
           </div>
@@ -74,7 +85,7 @@ function Country_spec(){
                 img = {img_4}
                 onClick = {() => {
                   setImage(!img);
-                  swapImage2();
+                  swapImage4();
               }}
               />
           </div>
