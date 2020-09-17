@@ -21,7 +21,8 @@ function Country_spec(){
 
     function swapImage() {
         if( img === true) {
-          img_1 = liste_2[0]
+          img_1 = "/Image/viking.svg"
+          console.log("hi");
         }
     }
     function swapImage() {
@@ -29,7 +30,6 @@ function Country_spec(){
           img_1 = liste_2[0]
         }
     }
-
     return(
         <div className = "total-c">
             <Country
@@ -39,10 +39,8 @@ function Country_spec(){
             onClick = {() => {
               setImage(!img);
               swapImage();
-          }}
+            }}
           />
-
-            />
             <Country
             name = "Italy"
             description = "Italia liker å drikke vin"
