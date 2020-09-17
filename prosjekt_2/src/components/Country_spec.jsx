@@ -78,6 +78,51 @@ function Country_spec(){
               }}
               />
           </div>
+          <div className ="norway">
+                <Country
+                name = "Norway"
+                description = "vi er glad i vikinger"
+                img = {img_1}
+                onClick = {() => {
+                  setImage(!img);
+                  swapImage();
+                }}
+                />
+          </div>
+
+          <div className = "italy">
+                <Country
+                name = "Italy"
+                description = "Italia liker å drikke vin"
+                img = {img_2}
+                onClick = {() => {
+                  setImage(!img);
+                  swapImage2();
+              }}
+              />
+          </div>
+          <div className = "portugal">
+                <Country
+                name = "Portugal"
+                description = "Christianio Ronaldo er fra Portogal"
+                img = {img_3}
+                onClick = {() => {
+                  setImage(!img);
+                  swapImage2();
+              }}
+          />
+          </div>
+          <div className = "greece">
+                <Country
+                name = "Greece"
+                description = "Greske filosofer og salat"
+                img = {img_4}
+                onClick = {() => {
+                  setImage(!img);
+                  swapImage2();
+              }}
+              />
+          </div>
         </div>
     )
 }
