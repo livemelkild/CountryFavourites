@@ -14,8 +14,12 @@ header {
 
 }
 
+.total-c {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  border: 1px solid black;
 
-
+}
 
 .country{
   background: #fff;
@@ -25,9 +29,7 @@ header {
   margin: 16px;
   float: left;
   width: 250px;
-  /*display: grid;
-  grid-template-columns: 50% 50%;*/
-
+  border: 1px solid black;
 }
 
 .country h1 {
