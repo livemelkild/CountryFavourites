@@ -16,6 +16,7 @@ header {
 
 
 
+
 .country{
   background: #fff;
   border-radius: 7px;
@@ -24,6 +25,9 @@ header {
   margin: 16px;
   float: left;
   width: 250px;
+  /*display: grid;
+  grid-template-columns: 50% 50%;*/
+
 }
 
 .country h1 {
