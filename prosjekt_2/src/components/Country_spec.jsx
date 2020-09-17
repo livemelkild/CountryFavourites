@@ -16,7 +16,7 @@ function Country_spec(){
 
   function swapImage() {
       if( img === true) {
-        img_1 = liste_2[i+1]
+        img_1 = liste_2[0]
       }
   }
 
