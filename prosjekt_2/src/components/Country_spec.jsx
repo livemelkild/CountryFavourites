@@ -18,6 +18,8 @@ function Country_spec(){
 //entrer state til img
     const [img, setImage] = useState(false)
 
+
+
     function swapImage() {
         if( img === true) {
           console.log("italia");
