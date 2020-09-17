@@ -1,48 +1,67 @@
 
 
 header {
-  background-color: #99f3bd;
-  color: #ff5722;
-  font-family: "McLaren", cursive;
+  background-color: #edcfa9;
+  color: #d57149;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-weight: 200;
   text-align: center;
-  background: #fabea7;
+  background: #edcfa9;
   border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
+  box-shadow: 0 2px 5px #aa4a30;
+  padding: 10px;
+  margin: 30px;
+  display: grid;
+}
+.country{
+
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #aa4a30;
+  border-radius: 7px;
   padding: 10px;
   margin: 16px;
-
+  float: left;
+  width: 250px;
 }
 
 .total-c {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  border: 1px solid red;
 
 }
+.norway {
+  display: grid;
+}
+.italy{
+  display: grid;
+}
+.portugal{
+  display: flex;
+}
+.greece {
+  display: flex;
+}
 
-.country{
-  background: #fff;
+.image{
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 5px #aa4a30;
   border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  margin: 16px;
-  float: left;
-  width: 250px;
-  border: 1px solid black;
 }
 
 .country h1 {
   font-size: 1.5em;
   margin-bottom: 20px;
-  font-family: "McLaren", cursive;
+  font-family: Georgia, serif;
   text-align: center;
+  color: #d57149;
 
 }
 
 .country p {
   font-size: 1.1em;
   margin-bottom: 6px;
-  font-family: "McLaren", cursive;
+  font-family: Georgia, serif;
   text-align: center;
 }
