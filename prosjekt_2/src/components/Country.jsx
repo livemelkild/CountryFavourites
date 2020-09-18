@@ -7,7 +7,7 @@ function Country(props) {
         <h1>{props.name}</h1>
         <p> {props.description}</p>
         <div className = "image">
-        <img src = {process.env.PUBLIC_URL + props.img} alt = "img"/>
+          <img src = {process.env.PUBLIC_URL + props.img} alt = "img"/>
         </div>
       </button>
   )
