@@ -3,6 +3,11 @@ import React from "react";
 
 export class LocalStorage extends React.Component {
 
+    constructor(){
+        super();
+        this.state = {country: ""};
+    }
+
     setDataLocal(country){
                //set data with localstorage
       //  let obj = { name: "John", age: 12, email: "mymail@mail.no"}
@@ -13,9 +18,17 @@ export class LocalStorage extends React.Component {
         let dataLocal = localStorage.getItem("fav_country");
         dataLocal = JSON.parse(dataLocal);
         console.log(dataLocal);
-        return(
-            dataLocal
-        )
+        this.setState({ country: dataLocal});
+    }
+
+    //denne funksjonen er innebygd i react (lifecycle methodes) og sørger for at funksjonen blir kjkørt med engang
+    componentWillMount(){
+        this.getData();
+    }
+
+    handleClick() {
+        this.setDataLocal(document.getElementById("write_country").value) 
+        this.getData()
     }
 
 
@@ -24,11 +37,10 @@ export class LocalStorage extends React.Component {
         <div>
         <div className="save_info">
             <input id="write_country" placeholder="Lagre ditt favorittland til senere"/>
-            <button onClick={ () => this.setDataLocal(document.getElementById("write_country").value) }> Lagre favorittland (Local data)</button>
-            <button onClick={ () => this.getData() }>Hent favorittland (Local Data)</button>
+            <button onClick={ () => this.handleClick() }> Lagre favorittland (Local data)</button>
         </div>
         <div>
-            <p>{ this.getData() } </p>
+            <p>{ this.state.country } </p>
         </div>
         </div>
       );
