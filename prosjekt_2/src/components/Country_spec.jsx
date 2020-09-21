@@ -33,7 +33,7 @@ function Country_spec(){
 
     return(
         <div className = "total-c">
-          <div className ="norway">
+          <div id ="norway">
                 <Country
                 name = "Norway"
                 description = "vi er glad i vikinger"
