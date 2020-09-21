@@ -15,35 +15,27 @@ header {
 }
 
 .country{
-  border-radius: 7px;
+  border-radius: 10px;
+  background-color: white;
   box-shadow: 0 2px 5px #aa4a30;
   border-radius: 7px;
-  padding: 10px;
-  margin: 16px;
-  float: left;
+  margin: 0 auto;
   width: 250px;
+  display: grid;
 }
 
 .total-c {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 15px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.norway {
-  display: grid;
-}
-.italy{
-  display: grid;
-}
-.portugal{
-  display: flex;
-}
-.greece {
-  display: flex;
-}
+
 
 .image{
-  display: flex;
+  display: grid;
   justify-content: center;
   box-shadow: 0 2px 5px #aa4a30;
   border-radius: 7px;

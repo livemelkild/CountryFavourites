@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Country from "./Country";
 //import Map from "../Image/map_1.svg";
 
@@ -9,120 +9,49 @@ function Country_spec(){
     let liste_2 = ["/Image/viking.svg", "/Image/wine.svg",
     "/Image/fotball.svg", "/Image/athen.svg"]
 
+    let names = ["Norway", "Italia", "Portugal", "Hellas"];
+
 // lager variabel for hvert av de første bildene slik at jeg kan endre variabelen til et annet bilde senere
-    let img_1 = liste_1[0]
-    let img_2 = liste_1[1]
-    let img_3 = liste_1[2]
-    let img_4 = liste_1[3]
 
 //entrer state til img
-    const [img, setImage] = useState(false)
+    const [img, setImage] = useState([false, false, false, false])
+    const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3]]);
 
-    function swapImage() {
-      console.log("hi");
-        if( img === false) {
-          img_1 = "/Image/viking.svg"
+    function swapImage(index, prevState) {
+      const imageUrlState = imageUrls;
+      for (let i = 0; i < img.length; i++){
+        if (img[i]){
+          imageUrlState[i] = liste_2[i];
+        } else {
+          imageUrlState[i] = liste_1[i];
         }
+      }
+      setImageUrls([...imageUrlState]);
     }
-    function swapImage2() {
-      console.log("hello");
-        if( img === true) {
-          img_2 = liste_2[0]
-        }
+
+    function changeImage(index, prevState) {
+      const imgState = img;
+      imgState[index] = !prevState;
+      setImage(imgState);
     }
+
+    const content = imageUrls.map((url, index) => {
+      return   <div key={index * 3}>
+              <Country
+              name = {names[index]}
+              description = "vi er glad i vikinger"
+              img = {imageUrls[index]}
+              onClick = {() => {
+                changeImage(index, img[index]);
+                swapImage(index, img[index])
+              }}
+              />
+        </div>
+    })
 
     return(
         <div className = "total-c">
-          <div id ="norway">
-                <Country
-                name = "Norway"
-                description = "vi er glad i vikinger"
-                img = {img_1}
-                onClick = {() => {
-                  setImage(!img);
-                  swapImage();
-                }}
-                />
-          </div>
-
-          <div className = "italy">
-                <Country
-                name = "Italy"
-                description = "Italia liker å drikke vin"
-                img = {img_2}
-                onClick = {() => {
-                  setImage(!img);
-                  swapImage2();
-              }}
-              />
-          </div>
-          <div className = "portugal">
-                <Country
-                name = "Portugal"
-                description = "Christianio Ronaldo er fra Portogal"
-                img = {img_3}
-                onClick = {() => {
-                  setImage(!img);
-                  swapImage2();
-              }}
-          />
-          </div>
-          <div className = "greece">
-                <Country
-                name = "Greece"
-                description = "Greske filosofer og salat"
-                img = {img_4}
-                onClick = {() => {
-                  setImage(!img);
-                  swapImage2();
-              }}
-              />
-          </div>
-          <div className ="norway">
-                <Country
-                name = "Norway"
-                description = "vi er glad i vikinger"
-                img = {img_1}
-                onClick = {() => {
-                  setImage(!img);
-                  swapImage();
-                }}
-                />
-          </div>
-
-          <div className = "italy">
-                <Country
-                name = "Italy"
-                description = "Italia liker å drikke vin"
-                img = {img_2}
-                onClick = {() => {
-                  setImage(!img);
-                  swapImage2();
-              }}
-              />
-          </div>
-          <div className = "portugal">
-                <Country
-                name = "Portugal"
-                description = "Christianio Ronaldo er fra Portogal"
-                img = {img_3}
-                onClick = {() => {
-                  setImage(!img);
-                  swapImage2();
-              }}
-          />
-          </div>
-          <div className = "greece">
-                <Country
-                name = "Greece"
-                description = "Greske filosofer og salat"
-                img = {img_4}
-                onClick = {() => {
-                  setImage(!img);
-                  swapImage2();
-              }}
-              />
-          </div>
+        {content}
         </div>
     )
 }
