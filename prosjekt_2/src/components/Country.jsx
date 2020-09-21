@@ -35,9 +35,9 @@ function Country(props) {
             <img src = {process.env.PUBLIC_URL + props.img} alt = "img"/>
           </div>
         </button>
-        {isFavorite && <button className="saved" onClick={() => handleClick()}>true</button>}
-        {!isFavorite && <button className="saved" onClick={() => handleClick()}>false</button>}
 
+        {isFavorite && <button className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/ikke_hjerte.png"} alt="hjerte" width="25" height="20"/></button>}
+        {!isFavorite && <button className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/hjerte.png"} alt="hjerte" width="25" height="20"/></button>}
       </div>
   )
 }
