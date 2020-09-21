@@ -20,14 +20,16 @@ header {
   box-shadow: 0 2px 5px #aa4a30;
   border-radius: 7px;
   margin: 0 auto;
-  width: 250px;
+  width: 280px;
+  height: 200px;
   display: grid;
+
 }
 
 .total-c {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
-  grid-gap: 15px;
+  grid-gap: 70px;
   width: 100%;
   margin: 0 auto;
 }
@@ -40,6 +42,8 @@ header {
   box-shadow: 0 2px 5px #aa4a30;
   border-radius: 7px;
   padding: 10px;
+  display: inline-block;
+  border: 1px solid black;
 }
 
 .country h1 {

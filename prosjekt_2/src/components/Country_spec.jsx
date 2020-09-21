@@ -36,7 +36,7 @@ function Country_spec(){
     }
 
     const content = imageUrls.map((url, index) => {
-      return   <div key={index * 3}>
+      return   <div key={index * 3} className = "country" >
               <Country
               name = {names[index]}
               description = "vi er glad i vikinger"
