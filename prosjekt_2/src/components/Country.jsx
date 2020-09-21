@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect} from "react";
 import style from "./Country.css"
 
@@ -30,17 +29,19 @@ function Country(props) {
 
 
   return(
-      <div>
-        <button className = "country" onClick = {props.onClick}>
+      <div className = "country">
           <h1>{props.name}</h1>
           <p> {props.description}</p>
-          <div id = "image">
-            <img src = {process.env.PUBLIC_URL + props.img} alt = "img"/>
+            <div id ="image_style" onClick = {props.onClick}>
+            <div id = "image">
+              <img src = {process.env.PUBLIC_URL + props.img} alt = "img"/>
+            </div>
+            </div>
+            <br/>
+          <div id="like">
+          {isFavorite && <div className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/ikke_hjerte.png"} alt="hjerte" width="25" height="20"/></div>}
+          {!isFavorite && <div className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/hjerte.png"} alt="hjerte" width="25" height="20"/></div>}
           </div>
-          {isFavorite && <button className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/ikke_hjerte.png"} alt="hjerte" width="25" height="20"/></button>}
-          {!isFavorite && <button className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/hjerte.png"} alt="hjerte" width="25" height="20"/></button>}
-        </button>
-
       </div>
   )
 }

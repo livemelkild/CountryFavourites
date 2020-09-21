@@ -9,6 +9,7 @@ function App() {
     <div >
           <Header />
           <Country_spec />
+          <br />
           <SessionStorage />
     </div>
   );

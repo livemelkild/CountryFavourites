@@ -21,10 +21,27 @@ header {
   border-radius: 7px;
   margin: 0 auto;
   width: 280px;
-  height: 200px;
+  height: 220px;
   display: grid;
+  justify-content: center;
 
 }
+
+.like{
+  width: 280px;
+  justify-content: left;
+}
+
+
+.image{
+  display: grid;
+  background-color: white;
+  justify-content: center;
+  border-radius: 7px;
+  padding: 10px;
+  display: inline-block;
+}
+
 
 .total-c {
   display: grid;
@@ -34,17 +51,6 @@ header {
   margin: 0 auto;
 }
 
-
-
-.image{
-  display: grid;
-  justify-content: center;
-  box-shadow: 0 2px 5px #aa4a30;
-  border-radius: 7px;
-  padding: 10px;
-  display: inline-block;
-  border: 1px solid black;
-}
 
 .country h1 {
   font-size: 1.5em;
