@@ -35,7 +35,6 @@ function Country(props) {
             <img src = {process.env.PUBLIC_URL + props.img} alt = "img"/>
           </div>
         </button>
-
         {isFavorite && <button className="saved" onClick={() => handleClick()}>true</button>}
         {!isFavorite && <button className="saved" onClick={() => handleClick()}>false</button>}
 
