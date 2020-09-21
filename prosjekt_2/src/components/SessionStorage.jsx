@@ -3,6 +3,11 @@ import React from "react";
 
 export class SessionStorage extends React.Component {
 
+    constructor(){
+        super();
+        this.state = {country: ""};
+    }
+
     setDataSession(country){
  
        // let favCountry = Country_spec.getItem("Norway");
@@ -16,21 +21,23 @@ export class SessionStorage extends React.Component {
         let dataStorage = sessionStorage.getItem("fav_country");
         dataStorage = JSON.parse(dataStorage);
         console.log(dataStorage);
-        return(
-            dataStorage
-        )
+        this.setState({country: dataStorage});
+    }
+
+    handleClick() {
+        this.setDataSession(document.getElementById("save_country").value)
+        this.getData()
     }
 
     render(){
         return (
         <div>
         <div className="save_info">
-            <input id="write_country" placeholder="Lagre ditt favoritt land midlertidig"/>
-            <button onClick={ () => this.setDataSession(document.getElementById("write_country").value) }>Lagre favorittland (Session data)</button>
-            <button onClick={ () => this.getData() }>Hent favorittland (Session Data)</button>
+            <input id="save_country" placeholder="Lagre ditt favoritt land midlertidig"/>
+            <button onClick={ () => this.handleClick() }>Lagre favorittland (Session data)</button>
         </div>
         <div>
-            <p>{ this.getData() } </p>
+            <p>{ this.state.country } </p>
         </div>
         </div>
       );
