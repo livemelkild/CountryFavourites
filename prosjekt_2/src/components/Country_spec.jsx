@@ -18,12 +18,17 @@ function Country_spec(){
 //entrer state til img
     const [img, setImage] = useState(false)
 
+    const setImage = (img) => {
+          setImage() ;
+   };
+
     function swapImage() {
-      console.log("hi");
-        if( img === false) {
-          img_1 = "/Image/viking.svg"
-        }
-    }
+          console.log("hi")
+            if( img === true) {
+                  img_1 = liste_2[0]
+            }
+      }
+
     function swapImage2() {
       console.log("hello");
         if( img === true) {
