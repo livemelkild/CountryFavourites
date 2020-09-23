@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import Country from "./Country";
 import SessionStorage from "./SessionStorage";
+import {Link} from "react-router-dom";
+
 //import Map from "../Image/map_1.svg";
 
 
@@ -57,6 +59,9 @@ function Country_spec(){
         {content}
         <br />
         <SessionStorage />
+        <Link className = "back_to_start" to="/">
+                    <p>Tilbake til startside</p>
+        </Link>
         </div>
     )
 }

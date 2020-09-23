@@ -1,18 +1,18 @@
 @media (prefers-reduced-motion: no-preference){
     #circle{
-      animation: moveCircle infinite 3s linear;
+      animation: moveStart infinite 3s linear;
     }
   }
   
   
-  @keyframes moveCircle {
+  @keyframes moveStart {
       0%{
-        transform: rotate(2deg);
+        transform: rotate(1deg);
       }
       50%{
-        transform: rotate(-2deg)
+        transform: rotate(-1deg)
       }
       100%{
-        transform: rotate(2deg);
+        transform: rotate(1deg);
       }
     }
