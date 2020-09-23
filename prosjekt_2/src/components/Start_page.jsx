@@ -7,6 +7,8 @@ export class Start_page extends React.Component{
         return(
             <div id="circle">
             <Link className = "start_link" to="/country">
+                <br/>
+                <img src={process.env.PUBLIC_URL + "/Image/arrow.svg"}></img>
                 <div className="start_side"> 
                     Utforsk landene du kan reise til
                 </div>

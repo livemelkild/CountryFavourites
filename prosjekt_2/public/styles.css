@@ -23,15 +23,12 @@ header {
   width: 280px;
   height: 230px;
   display: grid;
-  justify-content: center;
-  align-items: center;
-
+  text-align: center;
 }
 
 .like{
   width: 280px;
   align-self: center;
-
   justify-content: center;
 }
 
@@ -69,7 +66,6 @@ header {
   justify-content: center;
   background-color: white;
   width: 50%;
-
 }
 
 .country p {
@@ -100,7 +96,20 @@ header {
   height: 300px;
 }
 
-start_link:hover{
-  color: hotpink;
+.back_to_start{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px #aa4a30;
+}
+
+.center_content{
+  display: grid;
+  position: relative;
+  text-align: center;
 }
 
