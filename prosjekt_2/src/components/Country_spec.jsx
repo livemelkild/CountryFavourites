@@ -3,6 +3,8 @@ import Country from "./Country";
 import SessionStorage from "./SessionStorage";
 import {Link} from "react-router-dom";
 
+import usePoem from "./usePoem";
+
 //import Map from "../Image/map_1.svg";
 import italian_sound from "./mp3/Italian.mp3";
 import portuguese_sound from "./mp3/Portuguese.mp3";
@@ -11,21 +13,29 @@ import greek_sound from "./mp3/Greek.mp3";
 
 
 function Country_spec(){
-  //Liste over bildene. Liste_1 er over de ulike kartene som dukker opp som startbilde, liste_2 er bildene det skal skiftes til
+
+
+   const poem_italy = JSON.stringify(usePoem("In this short Life"));
+   const poem_norway = JSON.stringify(usePoem("In this short Life"));
+   const poem_greece = JSON.stringify(usePoem("In this short Life"));
+   const poem_portugal = JSON.stringify(usePoem("In this short Life"));
+
+
+
+  let poem_list = [poem_norway, poem_italy,poem_portugal,poem_greece,poem_norway, poem_italy,poem_portugal,poem_greece]
+
     let liste_1 = ["/Image/map_1.svg", "/Image/italy.svg",
-    "/Image/portugal.svg", "/Image/greece.svg" ]
+    "/Image/portugal.svg", "/Image/greece.svg", "/Image/map_1.svg", "/Image/italy.svg",
+    "/Image/portugal.svg", "/Image/greece.svg"  ]
     let liste_2 = ["/Image/viking.svg", "/Image/wine.svg",
+    "/Image/fotball.svg", "/Image/athen.svg","/Image/viking.svg", "/Image/wine.svg",
     "/Image/fotball.svg", "/Image/athen.svg"]
 
-    let names = ["Norway", "Italia", "Portugal", "Hellas"];
-    let sound_list = [norwegian_sound,italian_sound,portuguese_sound, greek_sound]
+    let names = ["Norway", "Italia", "Portugal", "Hellas", "England", "Tyskland", "Frankrike", "Spania"];
+    let sound_list = [norwegian_sound,italian_sound,portuguese_sound, greek_sound, norwegian_sound,italian_sound,portuguese_sound, greek_sound]
 
-// lager variabel for hvert av de første bildene slik at jeg kan endre variabelen til et annet bilde senere
-
-//entrer state til img
-
-    const [img, setImage] = useState([false, false, false, false])
-    const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3]]);
+    const [img, setImage] = useState([false, false, false, false, false, false, false, false])
+    const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3], liste_1[4], liste_1[5], liste_1[6], liste_1[7]]);
 
     function swapImage(index, prevState) {
       const imageUrlState = imageUrls;
@@ -50,7 +60,7 @@ function Country_spec(){
               <Country
               name = {names[index]}
               sound = {sound_list[index]}
-              description = "By pressing play you can practice the word 'hi' in this country:"
+              description = {poem_list[index]}
               img = {imageUrls[index]}
               onClick = {() => {
                 changeImage(index, img[index]);
