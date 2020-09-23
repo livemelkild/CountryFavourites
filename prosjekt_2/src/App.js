@@ -9,7 +9,6 @@ function App() {
     <div>
           <Header />
           <div className = "wrapper">
-            
             <Country_spec />
             <Web_storage />
           </div>
