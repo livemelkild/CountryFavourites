@@ -7,7 +7,7 @@ interface Ipoem {
 }
 */
 
-const usePoem = ( title: String) => {
+const usePoem = ( title) => {
   const [poem, setPoem] = useState();
   const api_url = ("https://poetrydb.org/title/" + title);
   console.log("hei");
@@ -24,6 +24,7 @@ const usePoem = ( title: String) => {
       getPoem();
     }
   })
+  return poem;
 }
 
 export default usePoem;
