@@ -78,3 +78,29 @@ header {
   font-family: Georgia, serif;
   text-align: center;
 }
+
+#circle{
+  display: flex;
+  justify-content: space-around;
+  padding: black;
+  background-color: white;
+  font-family: Georgia, serif;
+  text-shadow: black;
+  height: 300px;
+  width: 500px;
+  border-radius: 20px;
+}
+
+
+.start_link{
+  justify-self: center;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  height: 300px;
+}
+
+start_link:hover{
+  color: hotpink;
+}
+
