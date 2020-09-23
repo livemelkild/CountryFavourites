@@ -1,6 +1,5 @@
 import React from "react"
 import {Link} from "react-router-dom";
-import Style from "./Start_page.css";
 
 export class Start_page extends React.Component{
     render() {

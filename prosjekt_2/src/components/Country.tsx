@@ -29,7 +29,6 @@ function Country(props: countryProps) {
 
   const getData = () => {
     let dataLocal = JSON.parse(localStorage.getItem(props.name));
-    dataLocal = JSON.parse(dataLocal);
     console.log(dataLocal);
     setIsFavorite(dataLocal);
     }
