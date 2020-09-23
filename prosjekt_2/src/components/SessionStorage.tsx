@@ -15,7 +15,7 @@ export class SessionStorage extends React.Component {
         this.state = {country: ""};
     }
 
-    setDataSession(country:boolean){
+    setDataSession(country:string){
  
        // let favCountry = Country_spec.getItem("Norway");
         console.log(country)
@@ -24,15 +24,15 @@ export class SessionStorage extends React.Component {
 
     }
 
+
     getData() {
-        let dataStorage: = sessionStorage.getItem("fav_country");
-        dataStorage = JSON.parse(dataStorage);
-        console.log(dataStorage);
+        var dataStorage = JSON.parse(sessionStorage.getItem("fav_country"));
         this.setState({country: dataStorage});
     }
 
     handleClick() {
-        this.setDataSession(document.getElementById("save_country").value)
+        var inputValue = (document.getElementById("save_country") as HTMLInputElement).value;
+        this.setDataSession(inputValue);
         this.getData()
     }
 
