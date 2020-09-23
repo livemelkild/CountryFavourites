@@ -7,7 +7,7 @@ interface Ipoem {
 }
 */
 
-const usePoem = ( title) => {
+const usePoem = ( title) => { //skrive inn :string når vi bytter til TS
   const [poem, setPoem] = useState();
   const api_url = ("https://poetrydb.org/title/" + title);
   console.log("hei");
