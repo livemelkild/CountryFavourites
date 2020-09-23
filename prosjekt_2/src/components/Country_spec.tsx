@@ -27,7 +27,7 @@ function Country_spec(){
     const [img, setImage] = useState([false, false, false, false])
     const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3]]);
 
-    function swapImage(index, prevState) {
+    function swapImage( index: number , prevState: boolean ) {
       const imageUrlState = imageUrls;
       for (let i = 0; i < img.length; i++){
         if (img[i]){
