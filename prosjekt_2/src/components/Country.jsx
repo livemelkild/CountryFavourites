@@ -32,28 +32,20 @@ function Country(props) {
       <div className = "country">
           <h1>{props.name}</h1>
           <p> {props.description}</p>
-<<<<<<< HEAD
+         <div id = "sound">
+            <audio controls src = {props.sound} />
+          </div>
             <div id ="image_style" onClick = {props.onClick}>
             <div id = "image">
               <img src = {process.env.PUBLIC_URL + props.img} alt = "img"/>
             </div>
             </div>
             <br/>
-          <div id="like">
+          <div id="like">  
           {isFavorite && <div className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/ikke_hjerte.png"} alt="hjerte" width="25" height="20"/></div>}
           {!isFavorite && <div className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/hjerte.png"} alt="hjerte" width="25" height="20"/></div>}
           </div>
-=======
-          <div id = "sound">
-            <audio controls src = {props.sound} />
-          </div>
-          <div id = "image">
-            <img src = {process.env.PUBLIC_URL + props.img} alt = "img"/>
-          </div>
-          {isFavorite && <button className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/ikke_hjerte.png"} alt="hjerte" width="25" height="20"/></button>}
-          {!isFavorite && <button className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/hjerte.png"} alt="hjerte" width="25" height="20"/></button>}
-        </button>
->>>>>>> sound
+
       </div>
   )
 }
