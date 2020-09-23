@@ -24,23 +24,8 @@ function Country_spec(){
 
 //entrer state til img
 
-<<<<<<< HEAD
-    const setImage = (img) => {
-          setImage() ;
-   };
 
-    function swapImage() {
-          console.log("hi")
-            if( img === true) {
-                  img_1 = liste_2[0]
-            }
-      }
 
-    function swapImage2() {
-      console.log("hello");
-        if( img === true) {
-          img_2 = liste_2[0]
-=======
     const [img, setImage] = useState([false, false, false, false])
     const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3]]);
 
@@ -51,7 +36,6 @@ function Country_spec(){
           imageUrlState[i] = liste_2[i];
         } else {
           imageUrlState[i] = liste_1[i];
->>>>>>> caa858d8b75f61c0bfc89d7fad530875e08a33df
         }
       }
       setImageUrls([...imageUrlState]);
