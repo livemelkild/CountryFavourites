@@ -14,54 +14,115 @@ header {
   display: grid;
 }
 
+
 .country{
-  border-radius: 7px;
+  border-radius: 11px;
+  background-color: white;
   box-shadow: 0 2px 5px #aa4a30;
   border-radius: 7px;
+  margin: 0 auto;
+
+
+  width: 320px;
+  height: 350px;
+
+  display: grid;
+  text-align: center;
+}
+
+.like{
+  width: 280px;
+  align-self: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+#image{
+
+  display: grid;
+  background-color: white;
+  justify-content: center;
+
+  border-radius: 7px;
   padding: 10px;
-  margin: 16px;
-  float: left;
-  width: 250px;
+  display: inline-block;
+
 }
 
 .total-c {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(auto-fill, 290px);
+  grid-gap: 70px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.norway {
-  display: grid;
-}
-.italy{
-  display: grid;
-}
-.portugal{
-  display: flex;
-}
-.greece {
-  display: flex;
-}
-
-.image{
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 2px 5px #aa4a30;
-  border-radius: 7px;
-  padding: 10px;
-}
 
 .country h1 {
   font-size: 1.5em;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
   font-family: Georgia, serif;
   text-align: center;
   color: #d57149;
 
 }
+#sound {
+  margin-bottom: 30px;
+}
+
+.save_info{
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  width: 50%;
+}
 
 .country p {
   font-size: 1.1em;
-  margin-bottom: 6px;
+  margin-bottom: 30px;
   font-family: Georgia, serif;
+  text-align: center;
+}
+
+#circle{
+  display: flex;
+  justify-content: space-around;
+  padding: black;
+  background-color: white;
+  font-family: Georgia, serif;
+  text-shadow: black;
+  height: 300px;
+  width: 500px;
+  border-radius: 20px;
+}
+
+
+.start_link{
+  justify-self: center;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  height: 300px;
+}
+
+.back_to_start{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px #aa4a30;
+}
+
+.center_content{
+  display: grid;
+  position: relative;
   text-align: center;
 }
