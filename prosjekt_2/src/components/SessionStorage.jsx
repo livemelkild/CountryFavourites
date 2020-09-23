@@ -31,12 +31,13 @@ export class SessionStorage extends React.Component {
 
     render(){
         return (
+        <div  className="save_info">
         <div>
-        <div className="save_info">
             <input id="save_country" placeholder="Lagre ditt favoritt land midlertidig"/>
             <button onClick={ () => this.handleClick() }>Lagre favorittland (Session data)</button>
         </div>
-        <div>
+        <div className="sessionLagring">
+            <p>Lagre favorittdikt: </p>
             <p>{ this.state.country } </p>
         </div>
         </div>

@@ -21,15 +21,18 @@ header {
   border-radius: 7px;
   margin: 0 auto;
   width: 280px;
-  height: 220px;
+  height: 230px;
   display: grid;
   justify-content: center;
+  align-items: center;
 
 }
 
 .like{
   width: 280px;
-  justify-content: left;
+  align-self: center;
+
+  justify-content: center;
 }
 
 
@@ -41,7 +44,6 @@ header {
   padding: 10px;
   display: inline-block;
 }
-
 
 .total-c {
   display: grid;
@@ -58,6 +60,15 @@ header {
   font-family: Georgia, serif;
   text-align: center;
   color: #d57149;
+
+}
+
+.save_info{
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  width: 50%;
 
 }
 
