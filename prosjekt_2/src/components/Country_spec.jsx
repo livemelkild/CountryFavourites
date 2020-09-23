@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import Country from "./Country";
+import SessionStorage from "./SessionStorage";
 //import Map from "../Image/map_1.svg";
+
 
 function Country_spec(){
   //Liste over bildene. Liste_1 er over de ulike kartene som dukker opp som startbilde, liste_2 er bildene det skal skiftes til
@@ -50,8 +52,11 @@ function Country_spec(){
     })
 
     return(
+
         <div className = "total-c">
         {content}
+        <br />
+        <SessionStorage />
         </div>
     )
 }
