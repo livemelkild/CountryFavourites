@@ -14,14 +14,20 @@ header {
   display: grid;
 }
 
+
 .country{
-  border-radius: 10px;
+  border-radius: 11px;
   background-color: white;
   box-shadow: 0 2px 5px #aa4a30;
   border-radius: 7px;
   margin: 0 auto;
+<<<<<<< HEAD
   width: 280px;
   height: 230px;
+=======
+  width: 320px;
+  height: 350px;
+>>>>>>> sound
   display: grid;
   text-align: center;
 }
@@ -33,13 +39,22 @@ header {
 }
 
 
+<<<<<<< HEAD
 .image{
+=======
+
+#image{
+>>>>>>> sound
   display: grid;
   background-color: white;
   justify-content: center;
+<<<<<<< HEAD
   border-radius: 7px;
   padding: 10px;
   display: inline-block;
+=======
+
+>>>>>>> sound
 }
 
 .total-c {
@@ -53,11 +68,14 @@ header {
 
 .country h1 {
   font-size: 1.5em;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
   font-family: Georgia, serif;
   text-align: center;
   color: #d57149;
 
+}
+#sound {
+  margin-bottom: 30px;
 }
 
 .save_info{
@@ -70,7 +88,7 @@ header {
 
 .country p {
   font-size: 1.1em;
-  margin-bottom: 6px;
+  margin-bottom: 30px;
   font-family: Georgia, serif;
   text-align: center;
 }
