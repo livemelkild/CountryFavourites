@@ -21,11 +21,7 @@ header {
   box-shadow: 0 2px 5px #aa4a30;
   border-radius: 7px;
   margin: 0 auto;
-
-
-  width: 320px;
   height: 500px;
-
   display: grid;
   text-align: center;
 }
@@ -38,11 +34,9 @@ header {
 
 
 #image{
-
   display: grid;
   background-color: white;
   justify-content: center;
-
   border-radius: 7px;
   padding: 10px;
   display: inline-block;
@@ -51,9 +45,10 @@ header {
 
 .total-c {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 290px);
+  grid-template-columns: repeat(auto-fill, 320px);
   grid-gap: 70px;
   width: 100%;
+  justify-content: center;
   margin: 0 auto;
 }
 
@@ -85,17 +80,38 @@ header {
   text-align: center;
 }
 
-#circle{
+.content_box{
   display: flex;
-  justify-content: space-around;
-  padding: black;
-  background-color: white;
-  font-family: Georgia, serif;
-  text-shadow: black;
-  height: 300px;
-  width: 500px;
-  border-radius: 20px;
+  justify-content: center;
 }
+
+@media (prefers-reduced-motion: no-preference){
+  #circle{
+    animation: moveStart infinite 3s linear;
+    display: flex;
+    justify-content: center;
+    padding: black;
+    background-color: white;
+    font-family: Georgia, serif;
+    text-shadow: black;
+    height: 300px;
+    width: 500px;
+    border-radius: 20px;
+  }
+}
+
+
+@keyframes moveStart {
+    0%{
+      transform: rotate(1deg);
+    }
+    50%{
+      transform: rotate(-1deg)
+    }
+    100%{
+      transform: rotate(1deg);
+    }
+  }
 
 
 .start_link{
@@ -122,3 +138,21 @@ header {
   position: relative;
   text-align: center;
 }
+
+@media (prefers-reduced-motion: no-preference){
+  #image{
+    animation: moveCircle infinite 3s linear;
+  }
+}
+
+@keyframes moveCircle {
+    0%{
+      transform: rotate(10deg);
+    }
+    50%{
+      transform: rotate(-10deg)
+    }
+    100%{
+      transform: rotate(10deg);
+    }
+  }

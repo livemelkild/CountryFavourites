@@ -79,6 +79,7 @@ function Country_spec(){
     })
 
     return(
+      <div className="content_box">
 
         <div className = "total-c">
           {content}
@@ -87,6 +88,7 @@ function Country_spec(){
           <Link className = "back_to_start" to="/">
                       <p>Tilbake til startside</p>
           </Link>
+        </div>
         </div>
     )
 }
