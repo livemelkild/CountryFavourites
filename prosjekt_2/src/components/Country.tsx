@@ -1,9 +1,16 @@
 import React, {useState, useEffect} from "react";
 import { StringLiteral } from "typescript";
 
+interface PoemI{
+  title: string;
+  author: string;
+  lines: string[];
+  linecount: string;
+}
+
 interface countryProps{
   name: string;
-  description: string;
+  description: PoemI;
   sound : string;
   img: string;
   onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
@@ -29,7 +36,7 @@ function Country(props: countryProps) {
   }
 
   const getData = () => {
-    let dataLocal = JSON.parse(localStorage.getItem(props.name) || "") as boolean;
+    let dataLocal = JSON.parse(localStorage.getItem(props.name) || "false") as boolean;
     console.log(dataLocal);
     setIsFavorite(dataLocal);
     }
@@ -38,11 +45,26 @@ function Country(props: countryProps) {
     getData()
   }, [])
 
+  useEffect(()=> {
+    console.log(props.
+    description);
+  }, [props.
+  description])
 
   return(
       <div className = "country">
           <h1>{props.name}</h1>
-          <p> {props.description}</p>
+          {
+            props.description && (
+              <div>
+              <p> {props.description[0].title}</p>
+              { props.description[0].lines.map((line, i) => (
+                <p>{line}</p>
+              ))}
+              </div>
+            )
+          }
+
           <div id = "sound">
             <audio controls src = {props.sound} />
           </div>

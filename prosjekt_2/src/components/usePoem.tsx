@@ -18,12 +18,13 @@ const usePoem = (title: string) => { //skrive inn :string når vi bytter til TS
       const response = await fetch (api_url);
       const data = await response.json();
       setPoem(data);
+      console.log("data from usePoem");
       console.log(data);
     }
-    if(poem == undefined){
+    if(poem === undefined){
       getPoem();
     }
-  })
+  }, [poem])
   return poem;
 }
 
