@@ -6,14 +6,15 @@ import {Link} from "react-router-dom";
 import usePoem from "./usePoem";
 
 //import Map from "../Image/map_1.svg";
-import italian_sound from "./mp3/Italian.mp3";
-import portuguese_sound from "./mp3/Portuguese.mp3";
-import norwegian_sound from "./mp3/Norwegian.mp3";
-import greek_sound from "./mp3/Greek.mp3";
-import german_sound from "./mp3/German.mp3";
-import french_sound from "./mp3/French.mp3";
-import spanish_sound from "./mp3/Spanish.mp3";
-import english_sound from "./mp3/Greek.mp3";
+
+const german_sound = require("./mp3/German.mp3");
+const french_sound = require("./mp3/French.mp3");
+const spanish_sound = require("./mp3/Spanish.mp3");
+const english_sound = require("./mp3/Greek.mp3");
+const portuguese_sound = require("./mp3/Portuguese.mp3");
+const norwegian_sound = require("./mp3/Norwegian.mp3");
+const greek_sound = require("./mp3/Greek.mp3");
+const italian_sound = require("./mp3/Italian.mp3");
 
 function Country_spec(){
 
@@ -44,7 +45,7 @@ function Country_spec(){
     const [img, setImage] = useState([false, false, false, false, false, false, false, false])
     const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3], liste_1[4], liste_1[5], liste_1[6], liste_1[7]]);
 
-    function swapImage(index, prevState) {
+    function swapImage(index: number, prevState: boolean) {
       const imageUrlState = imageUrls;
       for (let i = 0; i < img.length; i++){
         if (img[i]){
@@ -56,7 +57,7 @@ function Country_spec(){
       setImageUrls([...imageUrlState]);
     }
 
-    function changeImage(index, prevState) {
+    function changeImage(index: number, prevState: boolean) {
       const imgState = img;
       imgState[index] = !prevState;
       setImage(imgState);

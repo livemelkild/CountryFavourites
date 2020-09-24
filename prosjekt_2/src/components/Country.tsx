@@ -1,8 +1,17 @@
 import React, {useState, useEffect} from "react";
-import style from "./Country.css"
+import { StringLiteral } from "typescript";
 
+interface countryProps{
+  name: string;
+  description: string;
+  sound : string;
+  img: string;
+  onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
 
-function Country(props) {
+let dataLocal: boolean;
+
+function Country(props: countryProps) {
 
 
   //isFavorite er en variabel som er satt til false, og setIsFavorite er en funksjon som kan brukes hvor jeg vil
@@ -10,22 +19,24 @@ function Country(props) {
 
   const handleClick = () => {
     setDataLocal(!isFavorite);
+    console.log(localStorage.getItem(props.name))
     getData();
     }
 
-  const setDataLocal = (isSaved) => {
+  const setDataLocal = (isSaved: boolean) => {
     //set data with localstorage
     localStorage.setItem(props.name, JSON.stringify(isSaved));
   }
 
   const getData = () => {
-    let dataLocal = localStorage.getItem(props.name);
-    dataLocal = JSON.parse(dataLocal);
+    let dataLocal = JSON.parse(localStorage.getItem(props.name) || "") as boolean;
     console.log(dataLocal);
     setIsFavorite(dataLocal);
     }
 
-  useEffect(() => {getData()}, [])
+  useEffect(() => {
+    getData()
+  }, [])
 
 
   return(

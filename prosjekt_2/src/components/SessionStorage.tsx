@@ -1,31 +1,38 @@
 import React from "react";
 //import Country_spec from "./Country_spec";
 
-export class SessionStorage extends React.Component {
+interface IProps{
 
-    constructor(){
-        super();
+}
+interface sessionState{
+    country?: string;
+}
+
+export class SessionStorage extends React.Component<IProps, sessionState> {
+
+    constructor(props: IProps){
+        super(props);
         this.state = {country: ""};
     }
 
-    setDataSession(country){
+    setDataSession(country:string){
  
        // let favCountry = Country_spec.getItem("Norway");
         console.log(country)
         //set data with sessionStorage
-        sessionStorage.setItem("fav_country", JSON.stringify(country))
+        sessionStorage.setItem("fav_country", country.toString())
 
     }
 
+
     getData() {
-        let dataStorage = sessionStorage.getItem("fav_country");
-        dataStorage = JSON.parse(dataStorage);
-        console.log(dataStorage);
+        var dataStorage = (String(sessionStorage.getItem("fav_country")));
         this.setState({country: dataStorage});
     }
 
     handleClick() {
-        this.setDataSession(document.getElementById("save_country").value)
+        var inputValue = (document.getElementById("save_country") as HTMLInputElement).value;
+        this.setDataSession(inputValue);
         this.getData()
     }
 
