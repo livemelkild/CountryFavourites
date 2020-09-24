@@ -20,13 +20,13 @@ export class SessionStorage extends React.Component {
        // let favCountry = Country_spec.getItem("Norway");
         console.log(country)
         //set data with sessionStorage
-        sessionStorage.setItem("fav_country", JSON.stringify(country))
+        sessionStorage.setItem("fav_country", country.toString())
 
     }
 
 
     getData() {
-        var dataStorage = JSON.parse(sessionStorage.getItem("fav_country"));
+        var dataStorage = (Boolean(sessionStorage.getItem("fav_country")));
         this.setState({country: dataStorage});
     }
 

@@ -24,11 +24,11 @@ function Country(props: countryProps) {
 
   const setDataLocal = (isSaved:boolean) => {
     //set data with localstorage
-    localStorage.setItem(props.name, JSON.stringify(isSaved));
+    localStorage.setItem(props.name, isSaved.toString());
   }
 
   const getData = () => {
-    let dataLocal = JSON.parse(localStorage.getItem(props.name));
+    let dataLocal = (Boolean(localStorage.getItem(props.name)));
     console.log(dataLocal);
     setIsFavorite(dataLocal);
     }
