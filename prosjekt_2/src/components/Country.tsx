@@ -52,6 +52,7 @@ function Country(props: countryProps) {
   description])
 
   return(
+    <div className="content_box">
       <div className = "country">
           <h1>{props.name}</h1>
           {
@@ -79,8 +80,8 @@ function Country(props: countryProps) {
           {isFavorite && <div className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/ikke_hjerte.png"} alt="hjerte" width="25" height="20"/></div>}
           {!isFavorite && <div className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/hjerte.png"} alt="hjerte" width="25" height="20"/></div>}
           </div>
-
       </div>
+    </div>
   )
 }
 

@@ -1,10 +1,12 @@
-@media (prefers-reduced-motion: no-preference){
+/* @media (prefers-reduced-motion: no-preference){
     #image{
       animation: moveCircle infinite 3s linear;
     }
   }
-
-
+*/
+  #image{
+    animation: moveCircle infinite 3s linear;
+  }
   @keyframes moveCircle {
       0%{
         transform: rotate(10deg);

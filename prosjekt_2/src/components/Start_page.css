@@ -3,8 +3,8 @@
       animation: moveStart infinite 3s linear;
     }
   }
-  
-  
+
+
   @keyframes moveStart {
       0%{
         transform: rotate(1deg);
