@@ -19,18 +19,18 @@ const italian_sound = require("./mp3/Italian.mp3");
 function Country_spec(){
 
 
-   const poem_italy = usePoem("So much Summer");
+   const poem_italy = usePoem("A Death blow is a Life blow to Some");
    const poem_norway = usePoem("When Memory is full");
-   const poem_greece = usePoem("Dying at my music!");
-   const poem_portugal = usePoem("To flee from memory");
-   const poem_germnay = usePoem("An Antiquated Tree");
-   const poem_england = usePoem("When Memory is full");
-   const poem_france = usePoem("Dying at my music!");
-   const poem_spain = usePoem("To flee from memory");
+   const poem_greece = usePoem("liss is the plaything of the child --");
+   const poem_portugal = usePoem("Beauty crowds me till I die");
+   const poem_england = usePoem("Too happy Time dissolves itself");
+   const poem_germnay = usePoem("Of life to own --");
+   const poem_france = usePoem("The Butterfly in honored Dust");
+   const poem_spain = usePoem("No Autumn's intercepting Chill");
 
 
 
-  let poem_list = [poem_norway, poem_italy,poem_portugal,poem_greece,poem_norway, poem_italy,poem_greece,poem_greece]
+  let poem_list = [poem_norway, poem_italy,poem_portugal,poem_greece, poem_england,poem_germnay, poem_france,poem_spain]
 
     let liste_1 = ["/Image/map_1.svg", "/Image/italy.svg",
     "/Image/portugal.svg", "/Image/greece.svg", "/Image/england.svg", "/Image/germany.svg",
