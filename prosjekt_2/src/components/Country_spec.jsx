@@ -18,10 +18,14 @@ import english_sound from "./mp3/Greek.mp3";
 function Country_spec(){
 
 
-   const poem_italy = JSON.stringify(usePoem("In this short Life"));
-   const poem_norway = JSON.stringify(usePoem("In this short Life"));
-   const poem_greece = JSON.stringify(usePoem("In this short Life"));
-   const poem_portugal = JSON.stringify(usePoem("In this short Life"));
+   const poem_italy = JSON.stringify(usePoem("So much Summer"));
+   const poem_norway = JSON.stringify(usePoem("When Memory is full"));
+   const poem_greece = JSON.stringify(usePoem("Dying at my music!"));
+   const poem_portugal = JSON.stringify(usePoem("To flee from memory"));
+   const poem_germnay = JSON.stringify(usePoem("An Antiquated Tree"));
+   const poem_england = JSON.stringify(usePoem("When Memory is full"));
+   const poem_france = JSON.stringify(usePoem("Dying at my music!"));
+   const poem_spain = JSON.stringify(usePoem("To flee from memory"));
 
 
 
