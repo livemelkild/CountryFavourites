@@ -24,7 +24,7 @@ header {
 
 
   width: 320px;
-  height: 350px;
+  height: 500px;
 
   display: grid;
   text-align: center;
@@ -35,10 +35,6 @@ header {
   align-self: center;
   justify-content: center;
 }
-
-
-
-
 
 
 #image{
