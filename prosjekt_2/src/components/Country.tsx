@@ -57,8 +57,8 @@ function Country(props: countryProps) {
           <h1>{props.name}</h1>
           {
             props.description && (
-              <div>
-              <p> {props.description[0].title}</p>
+              <div className = "poem">
+              <p><b> {props.description[0].title}</b></p>
               { props.description[0].lines.map((line, i) => (
                 <p>{line}</p>
               ))}

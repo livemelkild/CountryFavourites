@@ -85,6 +85,11 @@ header {
   justify-content: center;
 }
 
+.poem{
+  font-size: x-small;
+  line-height: 0ch;
+}
+
 @media (prefers-reduced-motion: no-preference){
   #circle{
     animation: moveStart infinite 3s linear;
