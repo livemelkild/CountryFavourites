@@ -8,7 +8,7 @@ interface sessionState{
     country?: string;
 }
 
-export class SessionStorage extends React.Component {
+export class SessionStorage extends React.Component<IProps, sessionState> {
 
     constructor(props: IProps){
         super(props);
@@ -26,7 +26,7 @@ export class SessionStorage extends React.Component {
 
 
     getData() {
-        var dataStorage = (Boolean(sessionStorage.getItem("fav_country")));
+        var dataStorage = (String(sessionStorage.getItem("fav_country")));
         this.setState({country: dataStorage});
     }
 

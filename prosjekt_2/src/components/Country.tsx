@@ -4,7 +4,7 @@ import { StringLiteral } from "typescript";
 interface countryProps{
   name: string;
   description: string;
-  sound : HTMLAudioElement;
+  sound : string;
   img: string;
   onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
@@ -19,21 +19,24 @@ function Country(props: countryProps) {
 
   const handleClick = () => {
     setDataLocal(!isFavorite);
+    console.log(localStorage.getItem(props.name))
     getData();
     }
 
-  const setDataLocal = (isSaved:boolean) => {
+  const setDataLocal = (isSaved: boolean) => {
     //set data with localstorage
-    localStorage.setItem(props.name, isSaved.toString());
+    localStorage.setItem(props.name, JSON.stringify(isSaved));
   }
 
   const getData = () => {
-    let dataLocal = (Boolean(localStorage.getItem(props.name)));
+    let dataLocal = JSON.parse(localStorage.getItem(props.name) || "") as boolean;
     console.log(dataLocal);
     setIsFavorite(dataLocal);
     }
 
-  useEffect(() => {getData()}, [])
+  useEffect(() => {
+    getData()
+  }, [])
 
 
   return(
