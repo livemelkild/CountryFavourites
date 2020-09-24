@@ -80,12 +80,12 @@ function Country_spec(){
     return(
 
         <div className = "total-c">
-        {content}
-        <br />
-        <SessionStorage />
-        <Link className = "back_to_start" to="/">
-                    <p>Tilbake til startside</p>
-        </Link>
+          {content}
+          <br />
+          <SessionStorage />
+          <Link className = "back_to_start" to="/">
+                      <p>Tilbake til startside</p>
+          </Link>
         </div>
     )
 }
