@@ -24,6 +24,8 @@ function Country_spec(){
 
 //entrer state til img
 
+
+
     const [img, setImage] = useState([false, false, false, false])
     const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3]]);
 

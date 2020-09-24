@@ -2,7 +2,7 @@
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+/*
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -14,4 +14,8 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> 433084d84cd102f257cd7e38589b53a5f88b2d95
