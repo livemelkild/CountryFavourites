@@ -88,12 +88,14 @@ function Country_spec(){
 
     return(
       <div>
-      <button onClick={() => darkClick(){
+      <button onClick={() => {
         if (themeContext.theme === 'light'){
           themeContext.setTheme('dark');
         }else{
           themeContext.setTheme('light');
+       }
       }}>Bytt tema</button>
+
       <button onClick={() => {
         if (themeContext.theme === 'light'){
           themeContext.setTheme('colorful');
