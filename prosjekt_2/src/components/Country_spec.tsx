@@ -10,7 +10,7 @@ import { ThemeContext } from "./ThemeContext";
 const german_sound = require("./mp3/German.mp3");
 const french_sound = require("./mp3/French.mp3");
 const spanish_sound = require("./mp3/Spanish.mp3");
-const english_sound = require("./mp3/Greek.mp3");
+const english_sound = require("./mp3/english.mp3");
 const portuguese_sound = require("./mp3/Portuguese.mp3");
 const norwegian_sound = require("./mp3/Norwegian.mp3");
 const greek_sound = require("./mp3/Greek.mp3");
@@ -42,7 +42,7 @@ function Country_spec(){
     "/Image/croissant.svg", "/Image/sangria.svg"]
 
     let names = ["Norway", "Italia", "Portugal", "Hellas", "England", "Tyskland", "Frankrike", "Spania"];
-    let sound_list = [norwegian_sound,italian_sound,portuguese_sound, greek_sound, greek_sound,german_sound,french_sound, spanish_sound]
+    let sound_list = [norwegian_sound,italian_sound,portuguese_sound, greek_sound, english_sound,german_sound,french_sound, spanish_sound]
 
     const [img, setImage] = useState([false, false, false, false, false, false, false, false])
     const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3], liste_1[4], liste_1[5], liste_1[6], liste_1[7]]);
@@ -91,7 +91,7 @@ function Country_spec(){
         }
       }}>Bytt tema</button>
       <div className="content_box">
-          
+
         <div className = "total-c">
           {content}
           <br />
