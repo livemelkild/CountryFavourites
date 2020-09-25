@@ -5,7 +5,7 @@ function Header() {
   const themeContext = useContext(ThemeContext)!;
 
     return(
-        <header className = {` ${themeContext.theme === 'light' ?  '': 'dark'}`}><h1>Hvilket land vil du reise til?</h1></header>
+        <header className = {` ${themeContext.theme === 'light' ?  '': 'colorful'}`}><h1>Hvilket land vil du reise til?</h1></header>
     )
 }
 

@@ -1,8 +1,8 @@
 import React, {useState, createContext} from 'react';
 
 interface ThemeContextProps {
-    theme: 'light' | 'dark';
-    setTheme: (val: ('light' | 'dark')) => void;
+    theme: 'light' | 'dark' | 'colorful';
+    setTheme: (val: ('light' | 'dark' | 'colorful')) => void;
 }
 
 interface ThemeProps{}
@@ -10,7 +10,8 @@ interface ThemeProps{}
 export const ThemeContext = createContext<ThemeContextProps | null>(null);
 
 export const ThemeContextProvider: React.FC<ThemeProps> = ({children}) => {
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    const [theme, setTheme] = useState<'light' | 'dark' | 'colorful'>('light');
+
     return (
         <ThemeContext.Provider value={{theme, setTheme}}>
             {children}

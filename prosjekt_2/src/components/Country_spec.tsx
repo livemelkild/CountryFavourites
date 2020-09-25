@@ -82,20 +82,30 @@ function Country_spec(){
         </div>
     })
 
+    function darkClick(){
+
+    }
+
     return(
       <div>
-      <button onClick={() => {
+      <button onClick={() => darkClick(){
         if (themeContext.theme === 'light'){
           themeContext.setTheme('dark');
         }else{
           themeContext.setTheme('light');
-        }
       }}>Bytt tema</button>
+      <button onClick={() => {
+        if (themeContext.theme === 'light'){
+          themeContext.setTheme('colorful');
+        }else{
+          themeContext.setTheme('light');
+        }
+      }}>Bytt tema2</button>
       <div className="content_box">
 
         <div className = "total-c">
           {content}
-         
+
         </div>
         </div>
         <br />

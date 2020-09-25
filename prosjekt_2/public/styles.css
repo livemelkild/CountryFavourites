@@ -30,6 +30,11 @@ header {
   background-color: grey;
 }
 
+.colorful{
+  background-color: red;
+}
+
+
 .like{
   width: 280px;
   align-self: center;
@@ -153,14 +158,14 @@ header {
     justify-content: center;
     justify-items: center;
   }
-  
+
   .save_info{
     text-align: center;
     justify-content: center;
     background-color: white;
     width: 25%;
   }
-  
+
 .back_to_start{
   text-align: center;
   text-decoration: none;
