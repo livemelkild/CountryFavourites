@@ -41,8 +41,9 @@ function Country_spec(){
     "/Image/fotball.svg", "/Image/athen.svg","/Image/phone-box.svg", "/Image/waitress.svg",
     "/Image/croissant.svg", "/Image/sangria.svg"]
 
-    let names = ["Norway", "Italia", "Portugal", "Hellas", "England", "Tyskland", "Frankrike", "Spania"];
-    let sound_list = [norwegian_sound,italian_sound,portuguese_sound, greek_sound, english_sound,german_sound,french_sound, spanish_sound]
+
+    let names = ["Norge", "Italia", "Portugal", "Hellas", "England", "Tyskland", "Frankrike", "Spania"];
+    let sound_list = [norwegian_sound,italian_sound,portuguese_sound, greek_sound, greek_sound,german_sound,french_sound, spanish_sound]
 
     const [img, setImage] = useState([false, false, false, false, false, false, false, false])
     const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3], liste_1[4], liste_1[5], liste_1[6], liste_1[7]]);
@@ -94,13 +95,16 @@ function Country_spec(){
 
         <div className = "total-c">
           {content}
-          <br />
-          <SessionStorage />
-          <Link className = "back_to_start" to="/">
-                      <p>Tilbake til startside</p>
-          </Link>
+         
         </div>
         </div>
+        <br />
+          <div className = "footer">
+              <SessionStorage />
+              <Link className = "back_to_start" to="/">
+                  <p>Tilbake til startside</p>
+              </Link>
+          </div>
         </div>
     )
 }
