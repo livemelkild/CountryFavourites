@@ -45,6 +45,14 @@ header {
   justify-content: center;
 }
 
+.knappDark > .button > #dark {
+  color: #f5c6e8;
+  background-color: #F0FFF0;
+  color: #f5c6e8;
+  padding: 20px 30px;
+  font-size: 30px
+
+}
 
 #image{
   display: grid;
