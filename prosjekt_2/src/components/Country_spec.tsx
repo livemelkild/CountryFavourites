@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import Country from "./Country";
 import SessionStorage from "./SessionStorage";
 import {Link} from "react-router-dom";
@@ -17,6 +17,8 @@ const greek_sound = require("./mp3/Greek.mp3");
 const italian_sound = require("./mp3/Italian.mp3");
 
 function Country_spec(){
+
+  const themeContext = useContext(ThemeContext)!;
 
 
    const poem_italy = usePoem("A Death blow is a Life blow to Some");
@@ -66,7 +68,7 @@ function Country_spec(){
     const content = imageUrls.map((url, index) => {
       return   <div key={index * 3} className = "country" >
               <Country
-              theme = {ThemeContext.theme}
+              theme = {themeContext.theme}
               name = {names[index]}
               sound = {sound_list[index]}
               description = {poem_list[index]}
@@ -80,14 +82,16 @@ function Country_spec(){
     })
 
     return(
+      <div>
+      <button onClick={() => {
+        if (themeContext.theme === 'light'){
+          themeContext.setTheme('dark');
+        }else{
+          themeContext.setTheme('light');
+        }
+      }}>Bytt tema</button>
       <div className="content_box">
-          <button onClick={() => {
-            if (ThemeContext.theme === 'light'){
-              ThemeContext.setTheme('dark');
-            }else{
-              ThemeContext.setTheme('light');
-            }
-          }}>Bytt tema</button>
+          
         <div className = "total-c">
           {content}
           <br />
@@ -95,6 +99,7 @@ function Country_spec(){
           <Link className = "back_to_start" to="/">
                       <p>Tilbake til startside</p>
           </Link>
+        </div>
         </div>
         </div>
     )

@@ -52,9 +52,11 @@ function Country(props: countryProps) {
   }, [props.
   description])
 
+console.log(props.theme)
+
   return(
     <div className="content_box">
-      <div className = {'country ${props.theme === 'light' ? '': 'dark'}'}>
+      <div className = {`country ${props.theme === 'light' ?  '': 'dark'}`}>
           <h1>{props.name}</h1>
           {props.description && (
               <div className = "poem">

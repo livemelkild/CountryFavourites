@@ -26,6 +26,10 @@ header {
   text-align: center;
 }
 
+.dark{
+  background-color: grey;
+}
+
 .like{
   width: 280px;
   align-self: center;
