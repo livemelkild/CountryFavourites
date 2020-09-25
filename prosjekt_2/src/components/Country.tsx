@@ -64,7 +64,7 @@ useEffect(() => {
   return(
     <div className="content_box">
       <div className = {`country ${props.theme === 'light' ?  '': 'dark'}`}>
-          <h1>{props.name}</h1>
+          <h1 className = "hei">{props.name}</h1>
           {props.description && (
               <div className = "poem">
               <div className="save_poem" onClick={() => savePoem()}> </div>

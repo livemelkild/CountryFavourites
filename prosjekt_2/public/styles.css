@@ -27,11 +27,15 @@ header {
 }
 
 .dark{
-  background-color: grey;
+  background-color: lightgrey;
+}
+
+.dark > .hei {
+  color: white;
 }
 
 .colorful{
-  background-color: red;
+  background-color: lightgrey;
 }
 
 
