@@ -30,6 +30,11 @@ header {
   text-align: center;
 }
 
+.dark {
+  background-color: gray;
+}
+
+
 .like{
   width: 280px;
   align-self: center;

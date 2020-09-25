@@ -15,8 +15,6 @@ function App() {
           <Route path="/country" component={Country_spec}/>
         </Switch>
       </Router>
-      
-          
     </div>
   );
 };
