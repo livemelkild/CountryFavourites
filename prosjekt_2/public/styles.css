@@ -27,7 +27,7 @@ header {
 }
 
 .dark{
-  background-color: lightgrey;
+  background-color: #edcfa9;
 }
 
 .dark > .hei {
@@ -35,7 +35,7 @@ header {
 }
 
 .colorful{
-  background-color: lightgrey;
+  background-color: white;
 }
 
 
@@ -45,13 +45,42 @@ header {
   justify-content: center;
 }
 
-.knappDark > .button > #dark {
-  color: #f5c6e8;
-  background-color: #F0FFF0;
-  color: #f5c6e8;
-  padding: 20px 30px;
+.tittel{
+  color: #d57149;
+  border: none;
+  background-color: #edcfa9;
+  box-shadow: 3px 3px #d57149;
+  border-radius: 8px;
+  margin-right:100px;
+  padding: 3px 3px;
+  font-size: 30px
+}
+.knappDark {
+  color: #d57149;
+  border: none;
+  background-color: #edcfa9;
+  box-shadow: 3px 3px #d57149;
+  margin-right:100px;
+  border-radius: 8px;
+  padding: 3px 3px;
+  font-size: 30px
+}
+
+.knappColorful {
+  color: #d57149;
+  border: none;
+  background-color: #edcfa9;
+  box-shadow: 3px 3px #d57149;
+  border-radius: 8px;
+  margin-right:100px;
+  padding: 3px 3px;
   font-size: 30px
 
+}
+
+.temaKnapper {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #image{

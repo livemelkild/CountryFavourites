@@ -88,24 +88,33 @@ function Country_spec(){
 
     return(
       <div>
-      <div className = "knappDark">
-      <button id= "dark" onClick={() => {
-        if (themeContext.theme === 'light'){
-          themeContext.setTheme('dark');
-        }else{
-          themeContext.setTheme('light');
-       }
-     }}>Bytt tema</button> </div>
+      <div className = "temaKnapper">
+       <button className= "knappDark" onClick={() => {
+         if (themeContext.theme === 'light'){
+           themeContext.setTheme('dark');
+         }else{
+           themeContext.setTheme('light');
+         }
+       }}>Bytt tema 1</button>
 
-     <div className = "knappColorful">
-      <button id = "colorful" onClick={() => {
+
+
+      <button className = "knappColorful" onClick={() => {
         if (themeContext.theme === 'light'){
           themeContext.setTheme('colorful');
         }else{
           themeContext.setTheme('light');
         }
-      }}>Bytt tema2</button>
-      </div>
+      }}>Bytt tema 2</button>
+
+      <button className = "tittel" onClick={() => {
+         if (themeContext.theme === 'light'){
+           themeContext.setTheme('dark');
+         }else{
+           themeContext.setTheme('light');
+         }
+       }}>Bytt tema 3</button> </div>
+
       <div className="content_box">
 
         <div className = "total-c">
