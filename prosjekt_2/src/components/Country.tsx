@@ -18,6 +18,7 @@ interface countryProps{
 }
 
 let dataLocal: boolean;
+let dataSession: boolean;
 
 function Country(props: countryProps) {
 
@@ -54,12 +55,19 @@ function Country(props: countryProps) {
 
 console.log(props.theme)
 
+
+
+useEffect(() => {
+  getData()
+}, [])
+
   return(
     <div className="content_box">
       <div className = {`country ${props.theme === 'light' ?  '': 'dark'}`}>
           <h1>{props.name}</h1>
           {props.description && (
               <div className = "poem">
+              <div className="save_poem" onClick={() => savePoem()}> </div>
               <p><b> {props.description[0].title}</b></p>
               { props.description[0].lines.map((line, i) => (
                 <p>{line}</p>
@@ -81,6 +89,7 @@ console.log(props.theme)
           {!isFavorite && <div className="saved"  onClick={() => handleClick()} > <img src={process.env.PUBLIC_URL + "./Image/photo_like/hjerte.png"} alt="hjerte" width="25" height="20"/></div>}
           </div>
       </div>
+
     </div>
   )
 }
