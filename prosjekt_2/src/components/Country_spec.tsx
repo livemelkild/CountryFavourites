@@ -2,8 +2,8 @@ import React, {useState, useEffect} from "react";
 import Country from "./Country";
 import SessionStorage from "./SessionStorage";
 import {Link} from "react-router-dom";
-
 import usePoem from "./usePoem";
+import { ThemeContext } from "./ThemeContext";
 
 //import Map from "../Image/map_1.svg";
 
@@ -66,6 +66,7 @@ function Country_spec(){
     const content = imageUrls.map((url, index) => {
       return   <div key={index * 3} className = "country" >
               <Country
+              theme = {ThemeContext.theme}
               name = {names[index]}
               sound = {sound_list[index]}
               description = {poem_list[index]}
@@ -80,7 +81,13 @@ function Country_spec(){
 
     return(
       <div className="content_box">
-
+          <button onClick={() => {
+            if (ThemeContext.theme === 'light'){
+              ThemeContext.setTheme('dark');
+            }else{
+              ThemeContext.setTheme('light');
+            }
+          }}>Bytt tema</button>
         <div className = "total-c">
           {content}
           <br />

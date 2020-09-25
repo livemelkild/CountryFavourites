@@ -13,6 +13,7 @@ interface countryProps{
   description: PoemI;
   sound : string;
   img: string;
+  theme: 'light' | 'dark';
   onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 
@@ -53,19 +54,16 @@ function Country(props: countryProps) {
 
   return(
     <div className="content_box">
-      <div className = "country">
+      <div className = {'country ${props.theme === 'light' ? '': 'dark'}'}>
           <h1>{props.name}</h1>
-          {
-            props.description && (
+          {props.description && (
               <div className = "poem">
               <p><b> {props.description[0].title}</b></p>
               { props.description[0].lines.map((line, i) => (
                 <p>{line}</p>
               ))}
               </div>
-            )
-          }
-
+            )}
           <div id = "sound">
             <audio controls src = {props.sound} />
           </div>
