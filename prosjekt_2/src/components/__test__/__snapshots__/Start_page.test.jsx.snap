@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="content_box"
+>
+  <div
+    id="circle"
+  >
+    <a
+      className="start_link"
+      href="/country"
+      onClick={[Function]}
+    >
+      <br />
+      <img
+        src="/Image/arrow.svg"
+      />
+      <div
+        className="start_side"
+      >
+        Utforsk landene du kan reise til
+      </div>
+    </a>
+  </div>
+</div>
+`;
