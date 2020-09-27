@@ -96,9 +96,6 @@ function Country_spec(){
            themeContext.setTheme('light');
          }
        }}>Bytt tema 1</button>
-
-
-
       <button className = "knappColorful" onClick={() => {
         if (themeContext.theme === 'light'){
           themeContext.setTheme('colorful');
@@ -116,19 +113,20 @@ function Country_spec(){
        }}>Bytt tema 3</button> </div>
 
       <div className="content_box">
-
         <div className = "total-c">
           {content}
-
+          <br />
         </div>
         </div>
-        <br />
+        <div className="bottom">
+          <div></div>
           <div className = "footer">
-              <SessionStorage />
-              <Link className = "back_to_start" to="/">
-                  <p>Tilbake til startside</p>
-              </Link>
-          </div>
+                <SessionStorage />
+            </div>
+            <Link className = "back_to_start" to="/">
+                    <p>Tilbake til startside</p>
+            </Link>
+        </div>
         </div>
     )
 }
