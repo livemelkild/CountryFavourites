@@ -2,7 +2,7 @@
 
 exports[`renders without crashing 1`] = `
 <header
-  className=" "
+  className="light"
 >
   <h1>
     Hvilket land vil du reise til?
