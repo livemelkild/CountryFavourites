@@ -104,15 +104,26 @@ function Country_spec(){
         }
       }}>Bytt tema 2</button>
 
+
       <button className = "tittel" onClick={() => {
          if (themeContext.theme === 'light'){
            themeContext.setTheme('dark');
          }else{
            themeContext.setTheme('light');
          }
+<<<<<<< HEAD
+       }}>Bytt tema 3</button>
+
+       </div>
+
+      <div className="content_box">
+
+        <div className = "total-c">
+=======
        }}>Bytt tema 3</button> </div>
         <div className="content_box">
           <div className = "total-c">
+>>>>>>> 35447fd13da4c8ff2151655cf39db0010e492caf
           {content}
           <br />
         </div>
