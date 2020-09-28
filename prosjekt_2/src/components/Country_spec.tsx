@@ -90,27 +90,19 @@ function Country_spec(){
       <div>
       <div className = "temaKnapper">
        <button className= "knappDark" onClick={() => {
-         if (themeContext.theme === 'light'){
-           themeContext.setTheme('dark');
-         }else{
-           themeContext.setTheme('light');
-         }
+         themeContext.setTheme('dark');
        }}>Bytt tema 1</button>
       <button className = "knappColorful" onClick={() => {
-        if (themeContext.theme === 'light'){
+
           themeContext.setTheme('colorful');
-        }else{
-          themeContext.setTheme('light');
+
         }
-      }}>Bytt tema 2</button>
+      }>Bytt tema 2</button>
 
 
       <button className = "tittel" onClick={() => {
-         if (themeContext.theme === 'light'){
-           themeContext.setTheme('dark');
-         }else{
+
            themeContext.setTheme('light');
-         }
 
        }}>Bytt tema 3</button>
 
