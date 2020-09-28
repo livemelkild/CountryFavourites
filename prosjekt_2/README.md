@@ -11,7 +11,7 @@ Brukeren kan også lagre tittelen til favorittdiktet ved å skrive inn diktets t
 
 Det er tre forskjellige fargetemaer brukeren kan velge mellom.
 
-## Tekonolgi
+## Teknologi
 
 ### React
 Første uken ble brukt til å sette seg inn i react ved å lage prøveprosjekter. 
