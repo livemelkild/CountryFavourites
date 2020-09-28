@@ -140,6 +140,9 @@ Testing: https://www.youtube.com/watch?v=9liG4PuqKY0
 
 In the project directory, you can run:
 
+### `npm install`
+Installs all packages that are needed for the project.
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
