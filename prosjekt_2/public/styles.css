@@ -203,13 +203,6 @@ header {
   height: 300px;
 }
 
-/*
-.center_content{
-  display: grid;
-  position: relative;
-  text-align: center;
-}
-*/
 @media (prefers-reduced-motion: no-preference){
   #image{
     animation: moveCircle infinite 3s linear;
@@ -228,8 +221,6 @@ header {
     }
   }
 
-
-
   #start_knapp{
     color: #d57149;
     border: none;
@@ -247,8 +238,6 @@ header {
     padding: 3px 3px;
     font-size: 15px
   }
-
-
 
   .save_info{
     text-align: center;
