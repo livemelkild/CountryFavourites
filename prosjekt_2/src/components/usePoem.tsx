@@ -17,7 +17,7 @@ const usePoem = (title: string) => { //skrive inn :string når vi bytter til TS
     async function getPoem() {
       const response = await fetch (api_url);
       const data = await response.json();
-      setPoem(data);
+      setPoem(data[0]);
       console.log("data from usePoem");
       console.log(data);
     }
