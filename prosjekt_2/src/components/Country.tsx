@@ -13,7 +13,7 @@ interface countryProps{
   description: PoemI;
   sound : string;
   img: string;
-  theme: 'light' | 'dark' | 'colorful';
+  theme: 'light' | 'dark' | 'colorful' | 'white';
   onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
 

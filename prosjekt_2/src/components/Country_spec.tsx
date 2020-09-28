@@ -90,28 +90,41 @@ function Country_spec(){
       <div>
       <div className = "temaKnapper">
        <button className= "knappDark" onClick={() => {
+<<<<<<< HEAD
          if (themeContext.theme === 'light'){
            themeContext.setTheme('dark');
          }else{
            themeContext.setTheme('light');
          }
        }}>Endre farge på dikt</button>
+=======
+         themeContext.setTheme('dark');
+       }}>Bytt tema 1</button>
+>>>>>>> media-queries
       <button className = "knappColorful" onClick={() => {
-        if (themeContext.theme === 'light'){
+
           themeContext.setTheme('colorful');
-        }else{
-          themeContext.setTheme('light');
+
         }
+<<<<<<< HEAD
       }}>Endre farge på header</button>
+=======
+      }>Bytt tema 2</button>
+>>>>>>> media-queries
 
 
       <button className = "tittel" onClick={() => {
-         if (themeContext.theme === 'light'){
-           themeContext.setTheme('dark');
-         }else{
+
            themeContext.setTheme('light');
+<<<<<<< HEAD
          }
        }}>Bytter farge på dikttittel</button> </div>
+=======
+
+       }}>Bytt tema 3</button>
+
+       </div>
+>>>>>>> media-queries
         <div className="content_box">
           <div className = "total-c">
           {content}
