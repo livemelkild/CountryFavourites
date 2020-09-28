@@ -111,9 +111,8 @@ function Country_spec(){
            themeContext.setTheme('light');
          }
        }}>Bytt tema 3</button> </div>
-
-      <div className="content_box">
-        <div className = "total-c">
+        <div className="content_box">
+          <div className = "total-c">
           {content}
           <br />
         </div>
