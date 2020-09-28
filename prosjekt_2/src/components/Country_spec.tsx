@@ -43,7 +43,7 @@ function Country_spec(){
 
 
     let names = ["Norge", "Italia", "Portugal", "Hellas", "England", "Tyskland", "Frankrike", "Spania"];
-    let sound_list = [norwegian_sound,italian_sound,portuguese_sound, greek_sound, greek_sound,german_sound,french_sound, spanish_sound]
+    let sound_list = [norwegian_sound,italian_sound,portuguese_sound, greek_sound, english_sound,german_sound,french_sound, spanish_sound]
 
     const [img, setImage] = useState([false, false, false, false, false, false, false, false])
     const [imageUrls, setImageUrls] = useState([liste_1[0], liste_1[1], liste_1[2], liste_1[3], liste_1[4], liste_1[5], liste_1[6], liste_1[7]]);
@@ -90,46 +90,25 @@ function Country_spec(){
       <div>
       <div className = "temaKnapper">
        <button className= "knappDark" onClick={() => {
-<<<<<<< HEAD
-         if (themeContext.theme === 'light'){
-           themeContext.setTheme('dark');
-         }else{
-           themeContext.setTheme('light');
-         }
-       }}>Endre farge på dikt</button>
-=======
          themeContext.setTheme('dark');
        }}>Bytt tema 1</button>
->>>>>>> media-queries
       <button className = "knappColorful" onClick={() => {
 
           themeContext.setTheme('colorful');
 
         }
-<<<<<<< HEAD
-      }}>Endre farge på header</button>
-=======
       }>Bytt tema 2</button>
->>>>>>> media-queries
 
 
       <button className = "tittel" onClick={() => {
-
            themeContext.setTheme('light');
-<<<<<<< HEAD
-         }
-       }}>Bytter farge på dikttittel</button> </div>
-=======
-
        }}>Bytt tema 3</button>
-
        </div>
->>>>>>> media-queries
         <div className="content_box">
           <div className = "total-c">
-          {content}
+            {content}
           <br />
-        </div>
+          </div>
         </div>
         <div className="bottom">
           <div></div>
