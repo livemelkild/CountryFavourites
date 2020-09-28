@@ -208,12 +208,14 @@ header {
       box-shadow: 3px 3px #d57149;
       border-radius: 8px;
       font-size: 20px
+
   }
 
   .bottom{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin: 30px;
   }
 
   #start_knapp{
@@ -234,7 +236,7 @@ header {
     font-size: 15px
   }
 
-  
+
 
   .save_info{
     text-align: center;
