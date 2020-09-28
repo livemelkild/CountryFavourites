@@ -138,8 +138,6 @@ Testing (lånt kode): https://www.youtube.com/watch?v=9liG4PuqKY0
 
 Context API (lånt kode) : https://www.freecodecamp.org/news/clever-react-context-tricks-using-typescript-not-redux-7e2b9c7e5bf6/
 
-Props: https://reactjs.org/docs/components-and-props.html
-
 ## Available Scripts
 
 In the project directory, you can run:
