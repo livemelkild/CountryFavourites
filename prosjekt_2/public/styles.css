@@ -77,10 +77,14 @@ header {
   font-size: 30px
 
 }
-
+/* trenger css hjelp - jævla ikke-respondive knapper!!!*/
 .temaKnapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto-fill);
+  justify-content: center;
   text-align: center;
   margin-bottom: 20px;
+  grid-gap: 20px;
 }
 
 #image{
@@ -169,13 +173,13 @@ header {
   height: 300px;
 }
 
-
+/*
 .center_content{
   display: grid;
   position: relative;
   text-align: center;
 }
-
+*/
 @media (prefers-reduced-motion: no-preference){
   #image{
     animation: moveCircle infinite 3s linear;
@@ -195,26 +199,59 @@ header {
   }
 
   .footer{
-    display: flexbox;
-    justify-content: center;
-    justify-items: center;
+      display: flex;
+      justify-content: center;
+      justify-self: center;
+      width: 700px;
+      border: none;
+      background-color: white;
+      box-shadow: 3px 3px #d57149;
+      border-radius: 8px;
+      font-size: 20px
+
   }
+
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 30px;
+  }
+
+  #start_knapp{
+    color: #d57149;
+    border: none;
+    background-color: white;
+    box-shadow: 3px 3px 3px #d57149;
+    border-radius: 8px;
+    padding: 3px 3px;
+    font-size: 15px
+  }
+
+  #save_country{
+    background-color: white;
+    border-radius: 8px;
+    margin-right:100px;
+    padding: 3px 3px;
+    font-size: 15px
+  }
+
+
 
   .save_info{
     text-align: center;
     justify-content: center;
     background-color: white;
-    width: 25%;
   }
 
 .back_to_start{
   text-align: center;
   text-decoration: none;
   color: black;
+  border: none;
   background-color: white;
-  border-radius: 20px;
-  height: 50px;
-  width: 100px;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px #aa4a30;
+  box-shadow: 3px 3px #d57149;
+  border-radius: 8px;
+  padding: 3px 3px;
+  font-size: 15px
 }

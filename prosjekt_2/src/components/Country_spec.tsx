@@ -89,7 +89,6 @@ function Country_spec(){
     return(
       <div>
       <div className = "temaKnapper">
-    
        <button className= "knappDark" onClick={() => {
          if (themeContext.theme === 'light'){
            themeContext.setTheme('dark');
@@ -97,9 +96,6 @@ function Country_spec(){
            themeContext.setTheme('light');
          }
        }}>Bytt tema 1</button>
-
-
-
       <button className = "knappColorful" onClick={() => {
         if (themeContext.theme === 'light'){
           themeContext.setTheme('colorful');
@@ -115,6 +111,7 @@ function Country_spec(){
          }else{
            themeContext.setTheme('light');
          }
+<<<<<<< HEAD
        }}>Bytt tema 3</button>
 
        </div>
@@ -122,17 +119,24 @@ function Country_spec(){
       <div className="content_box">
 
         <div className = "total-c">
+=======
+       }}>Bytt tema 3</button> </div>
+        <div className="content_box">
+          <div className = "total-c">
+>>>>>>> 35447fd13da4c8ff2151655cf39db0010e492caf
           {content}
-
+          <br />
         </div>
         </div>
-        <br />
+        <div className="bottom">
+          <div></div>
           <div className = "footer">
-              <SessionStorage />
-              <Link className = "back_to_start" to="/">
-                  <p>Tilbake til startside</p>
-              </Link>
-          </div>
+                <SessionStorage />
+            </div>
+            <Link className = "back_to_start" to="/">
+                    <p>Tilbake til startside</p>
+            </Link>
+        </div>
         </div>
     )
 }
