@@ -72,7 +72,6 @@ console.log(props.theme)
           <div id = "sound">
             <audio controls src = {props.sound} />
           </div>
-
             <div id ="image_style" onClick = {props.onClick}>
             <div id = "image">
               <img src = {process.env.PUBLIC_URL + props.img} alt = "img"/>

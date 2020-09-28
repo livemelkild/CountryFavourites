@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 import usePoem from "./usePoem";
 import { ThemeContext } from "./ThemeContext";
 
-//import Map from "../Image/map_1.svg";
 
 const german_sound = require("./mp3/German.mp3");
 const french_sound = require("./mp3/French.mp3");
@@ -93,13 +92,9 @@ function Country_spec(){
          themeContext.setTheme('dark');
        }}>Bytt tema 1</button>
       <button className = "knappColorful" onClick={() => {
-
           themeContext.setTheme('colorful');
-
         }
       }>Bytt tema 2</button>
-
-
       <button className = "tittel" onClick={() => {
            themeContext.setTheme('light');
        }}>Bytt tema 3</button>
