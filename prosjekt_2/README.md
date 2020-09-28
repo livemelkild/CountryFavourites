@@ -1,107 +1,136 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Introduksjon
-Country Favorites er en applikasjon hvor brukeren kan velge sine favorittland ved å “hjerte” landet. 
-Hvert land består av et bevegelig kart, et lydopptak og et dikt. Ved trykk på kartet kan brukeren få 
-opp et nytt bilde som viser kjennetegn ved landet. Brukeren kan lære seg hvordan man sier “hei” i det 
-bestemte landet, ved å trykke på lydopptaket. 
+Country Favorites er en applikasjon hvor brukeren kan velge sine favorittland.
+Hvert land består av et roterende kart, et lydopptak og et dikt. 
+Ved trykk på kartet kan brukeren få opp et nytt bilde som viser et kjennetegn ved landet. 
+Brukeren kan lære seg hvordan man sier “hei” på landets språk ved å trykke på lydopptaket.
 
-Nederst på siden har brukeren mulighet til å få opp titlene til diktet ved å skrive inn landet diktet hører til. 
-Dermed har brukeren lagret favorittdiktet nederst på siden. 
+Brukeren kan lagre sitt favorittland, ved å trykke på hjertet plassert under lydopptaket. 
+Brukeren kan også lagre tittelen til favorittdiktet ved å skrive inn diktets tilhørende land nederst på siden.
 
-Når brukeren trykker på hjertet blir det rødt. Da har brukeren også mulighet til å senere 
-se hvilke land han/hun ønsker å dra til. 
+Det er tre forskjellige fargetemaer brukeren kan velge mellom.
 
 ## Tekonolgi
 
 ### React
-Første uken ble brukt til å sette seg inn i react og lage prøveprosjekter. 
-Dette var veldig nyttig for å forstå strukturen til react og gjorde det enklere
-å sette opp et godt hierarki fra start. I vår app.tsx så linker vi til hovedkomponentene, 
-noe som gjør det oversiktlig og gir mulighet til å endre struktur i senere tid.
+Første uken ble brukt til å sette seg inn i react ved å lage prøveprosjekter. 
+Dette var nyttig for å forstå strukturen til react og gjorde det enklere å 
+sette opp et godt hierarki fra start. I vår app.tsx linker vi til hovedkomponentene, 
+noe som gjør det oversiktlig og gir mulighet til å endre struktur senere.
 
-Siden vi skulle ha mange forskjellige land som alle hadde samme struktur, 
-benyttet vi oss av props i country.tsx filen. Slik kunne vi enkelt legge til nye land i sluttfasen. 
+Siden vi ønsket ulike land med lik struktur, benyttet vi oss av props i country.tsx filen. 
+Slik kunne vi enkelt legge til nye land i sluttfasen. 
 
 ### Context-API
 
+Vi benytter oss av context API i themeContext.tsx, slik at brukeren har mulighet 
+til å endre farger på ulike elementer av webapplikasjonen. 
+Dette gjøres ved at filen inneholder en state som setter  “theme”. 
+De ulike temaene vi har definert er “light”, “dark”, og “colorful”. 
+Når brukeren trykker på knappene øverst i webapplikasjonen så kaller 
+knappene på funksjonen “chosenTheme” i header.tsx. Da vil denne funksjonen 
+legge til/fjerne klasser i style.css filen slik at fargene på de ulike elementene endres.
+
+Fordelen med Context API fremfor bruk av state er når flere komponenter skal ha tilgang 
+til samme data, er det enklere å nå dataen med context. 
+
 ### Typescript
 
-Teknologien Typescript forbedrer kodekvaliteten og gjør den mer forståelig, 
-samt gir mindre errors underveis i prosjektet. Vi fikk ikke brukt typescript 
-like mye til vår fordel da vi ikke hadde implementert dette fra start noe som 
-resulterte i at vi måtte tilbake å bruke tid på å endre kode. 
+Typescript forbedrer kodekvaliteten, og gjør den mer forståelig. 
+Det er nettopp derfor denne teknologien er anbefalt å implementere i 
+prosjekter som skal utvikle større webapplikasjoner. 
+Typescript er lett å overføre til andre utviklere. 
+Vi fikk ikke brukt Typescript til vår fordel, fordi teknologien ikke ble implementert fra start.
+Dette resulterte i at vi måtte bruke tid på å endre koden senere.
 
 ### AJAX
 
-Ajax er brukt for å laste inn diktene dynamisk ved bruk av funksjonen fetch() i javascript. 
-Vi henter ett og ett dikt ved å legge til tittel i country_spec.tsx bak linken som ligger i usePoem. 
-Siden diktene blir lastet opp fra hver sin nettlink tar det enkelte ganger litt tid før alle diktene vises. 
-Dette er fordi hver fetch tar ganske mye overhead. 
+Ajax ble brukt for å laste inn diktene dynamisk med funksjonen fetch(). 
+Vi henter ett og ett dikt ved å legge til tittel i country_spec.tsx bak 
+linken som ligger i usePoem.tsx. Denne måten å hente diktene på gjør at det av 
+og til kan ta litt tid for diktene å vises på websiden. Dette er fordi hver fetch har mye overhead. 
 
 ### Class og Funksjonelle Komponenter
 
 Vi har kombinert bruken av funksjonelle og klasse komponenter. 
 Dette har gjort oss kjent med å skrive koden på begge måter. 
-Det er stor forskjell i syntaksen. Ettersom klasse-komponenter krever at 
-man extender komponenten fra React og returnerer en render-funksjon. 
-Funksjonelle-komponenter er bare ren JavaScript som tar inn argumenter og returnerer React elementer.
+Det er stor forskjell i syntaksen ettersom klasse-komponenter 
+krever at man extender komponenten fra React og returnerer en render-funksjon. 
+Funksjonelle-komponenter er ren JavaScript som tar inn argumenter og returnerer React elementer.
 
 Når det kommer til funksjonalitet kan man ikke opprette en egen state for funksjonelle-komponenter. 
-Staten må sendes fra en forelder komponenten som en prop. Dette har vi benyttet oss av ved å definere 
-staten i Country.tsx og sende propsene til Country_spec.tsx. Da prosjektet startet lærte vi oss først 
-funksjonelle komponenter, og ettersom landene var noe av det første vi implementerte på siden, 
-ble denne fremgangsmåten brukt. I ettertid ser vi at det kunne vært hensiktsmessig å bruke en klasse-komponent til propsene våre.
+Staten må sendes fra en forelder komponenten som en prop. Dette har vi benyttet oss av ved å definere staten 
+i Country.tsx og sende propsene til Country_spec.tsx. Da prosjektet startet lærte vi oss først funksjonelle komponenter, 
+derfor ble props brukt med funksjoner istedenfor klasser. I ettertid ser vi at det kunne vært hensiktsmessig å bruke en klasse-komponent.
 
-Vi har brukt funksjonelle-komponenter i stor grad. Det er fordi de er lettere å lese og medfører mindre kode ettersom det er ren JavaScript. 
-Det gjorde det også lettere for oss å dele komponentene inn i en hensiktsmessig struktur siden vi måtte skille komponenter da vi skulle bruke state.
-Dette anser vi som viktig ihvertfall når vi er nye til React. I fremtiden når vi blir mer erfarne ser vi for oss at det kan være gunstig å bruke mer 
-klasse-komponenter også.
+Funksjonelle komponenter ble brukt i størst grad, ettersom det var mindre kode å skrive og react var nytt for alle. 
+Ved dette var det også lettere å dele opp komponentene inn i en hensiktsmessig struktur. 
 
 ### Lagring - HTML Web storage
 
+På siden vår har vi implementert to forskjellige lagringsmåter. 
+Localstorage er brukt for å favorisere land under hvert av landene. 
+Dersom hjertet er rødt er landet lagret som favoritt. Ettersom det er 
+brukt localstorage vil disse valgene forbli i samme tilstand til neste gang 
+man refresher siden. Sessionstorage lagrer tittelen på diktet man liker best, 
+frem til man refresher siden. Det gjøres ved å skrive inn navnet på landet som diktet tilhører. 
+Her er det tatt hensyn til at man kan skrive store og små bokstaver, pluss at det kommer feilmelding 
+dersom man ikke skriver et gyldig land. Dette er hensiktsmessig ettersom man slipper å lese i gjennom 
+diktene flere ganger i mens man er på siden. 
+
 ### Grid/Flexbox
 
-Vi bestemte oss fra start å bruke grid slik at vi hadde muligheten til å implementere 
-todimensjonal layout om det skulle være nødvendig. Med grid fikk vi bygget et responsiv web design. 
-Dette ga oss kontrollen over elementene ved skalering av vindu samt hvordan de skulle ligge i forhold til hverandre. 
-Vi knotet mye med å få elementene til å bli sentrert på siden, 
-dette fordi vi ikke fikk grid til å angripe komponentene slik vi ønsket i starten. 
+Vi hadde en felles enighet om å bruke grid for å ha mulighet til å implementere todimensjonal layout senere. 
+Grid oppfylte også kravet om en webapplikasjon med responsivt webdesign. Dette ga oss kontrollen over 
+elementene ved skalering av vindu samt hvordan de skulle ligge i forhold til hverandre. 
 
 Flexbox er brukt i footer hvor du kan finne ditt favorittdikt. 
-Ettersom det var bare et element og det skulle sentreres på siden, var flexbox det naturlige valget. 
+Ettersom det var bare et element og det skulle sentreres på siden, var flexbox det naturlige valget.
 
 
 ### SVG
 
-Vi la alle SVG-bildene inn i public-mappen, dette gjør det enklere å hente ut hvert enkelt bilde. 
-Keyframes ble brukt for animasjon og endring ved klikk.
+Vi la alle SVG-bildene inn i public-mappen. 
+Det gjorde det enklere å hente ut hvert enkelt bilde. Keyframes ble brukt for animasjon og endring ved klikk. 
 
 ### Media Queries 
 
-Vi brukte media queries til å endre størrelse på “tema”-knappene når siden ble under 720px. 
-Slik ble ikke knappene for store i forhold til størrelsen på skjermen. 
+Vi brukte media queries til å endre størrelse på “tema”-knappene og lagring nederst på siden.
+Media queries bidrar til et responsivt design og god skalering med forskjellige skjermstørrelser.
 
 ### Viewport
 
-Denne teknologien blir automatisk implementert ved bruk av creact-react-app funksjonen. 
-Den ble linket til viewport i en meta tag i headeren i index.html
+Denne teknologien blir automatisk implementert ved bruk av creact-react-app funksjonen, 
+som er synlig i index.html. Viewport er et hjelpemiddel for at nettsiden skal ha responsivitet ved skalering av vinduet.
 
 ## Git
 
 Selv om alle på gruppen kjente til git fra før av, hadde vi en bratt læringskurve. 
-Dette bærer det preg av ved at det er opprettet mange brancher. 
-Flere av branchene som ble opprettet på starten ble aldri rørt. 
-
-Vi opprettet en develop branch som vi behandlet som vår master gjennom hele prosjektet. 
-Slik at den eneste “merge”-en som ble gjort med master var det ferdige produktet.
-
-Issues i git brukte vi for å sette opp arbeidsoppgaver. 
-Dette kunne vært bedre fulgt opp ettersom flere issues ble opprettet etter oppgaven ble angrepet. 
+Dette bærer det preg av ved at det er opprettet mange brancher og flere brancher 
+som ikke har blitt merget i develop. Dersom vi hadde fulgt opp issuene på git bedre 
+kunne det hjulpet for å ha styr på hvilke brancher som var nødvendig. 
+Vi opprettet en develop branch som vi jobbet ut fra gjennom prosjektet. 
+Slik at den eneste “merge”-en som ble gjort med master var det ferdige produktet.  
 
 ### Testing
 
+Det er implementert Jest snapshot tester for noen av komponentene. 
+Vi har ikke lagt stor fokus på testing ettersom det var mange 
+andre nye teknologier som gruppen ikke hadde brukt før, og ble prioritert.
 
+Gruppen har foretatt manuell testing på 4 skjermstørrelser. 
+Det har blitt gjort ved å endre skjermstørrelsen ved inspisering av nettsiden vår. 
+Det har blitt testet for “iPhoneX”, “iPad”, “iPhone5”, vertikal orientering og ordinær pc. 
+All funksjonaliteten og layouten fungerer fint i alle formater. 
+
+### Kilder
+
+SVG: https://www.flaticon.com/
+
+Tekst: https://poetrydb.org/author/Emily%20Dickinson/title 
+
+Lyd: https://www.specialtyansweringservice.net/learn-how-to-say-hello-in-57-languages/ 
 
 
 ## Available Scripts
