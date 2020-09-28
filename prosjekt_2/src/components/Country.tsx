@@ -57,10 +57,6 @@ console.log(props.theme)
 
 
 
-useEffect(() => {
-  getData()
-}, [])
-
   return(
     <div className="content_box">
       <div className = {`country ${props.theme === 'light' ?  '': 'dark'}`}>
