@@ -111,13 +111,14 @@ function Country_spec(){
           </div>
         </div>
         <div className="bottom">
-          <div></div>
           <div className = "footer">
                 <SessionStorage />
             </div>
-            <Link className = "back_to_start" to="/">
+            <div className = "back_to_start">
+            <Link className = "back_to_start_2" to="/">
                     <p>Tilbake til startside</p>
             </Link>
+            </div>
         </div>
         </div>
     )

@@ -10,7 +10,7 @@ interface PoemI{
 
 interface countryProps{
   name: string;
-  description: PoemI;
+  description?: PoemI;
   sound : string;
   img: string;
   theme: 'light' | 'dark' | 'colorful' | 'white';
@@ -56,16 +56,15 @@ function Country(props: countryProps) {
 console.log(props.theme)
 
 
-
   return(
     <div className="content_box">
       <div className = {`country ${props.theme === 'light' ?  '': 'dark'}`}>
           <h1 className = "hei">{props.name}</h1>
           {props.description && (
               <div className = "poem">
-              <div className="save_poem" onClick={() => savePoem()}> </div>
-              <p><b> {props.description[0].title}</b></p>
-              { props.description[0].lines.map((line, i) => (
+              <div className="save_poem"> </div>
+              <p><b> {props.description.title} </b></p>
+              { props.description.lines.map((line, i) => (
                 <p>{line}</p>
               ))}
               </div>

@@ -14,12 +14,10 @@ export class SessionStorage extends React.Component<IProps, sessionState> {
     }
 
     setDataSession(country:string){
- 
        // let favCountry = Country_spec.getItem("Norway");
         console.log(country)
         //set data with sessionStorage
         sessionStorage.setItem("fav_country", country.toString())
-
     }
 
 
@@ -63,7 +61,7 @@ export class SessionStorage extends React.Component<IProps, sessionState> {
         }
     
     useEffect(){
-        getData();
+        this.getData();
     }
 
     render(){
