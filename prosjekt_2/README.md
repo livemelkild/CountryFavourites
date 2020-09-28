@@ -132,6 +132,9 @@ Tekst: https://poetrydb.org/author/Emily%20Dickinson/title
 
 Lyd: https://www.specialtyansweringservice.net/learn-how-to-say-hello-in-57-languages/ 
 
+Local- og sessionstorage: https://www.youtube.com/watch?v=MOd5cTJ6kaA&t=572s
+
+Testing: https://www.youtube.com/watch?v=9liG4PuqKY0
 
 ## Available Scripts
 
