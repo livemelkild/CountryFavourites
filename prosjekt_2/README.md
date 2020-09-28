@@ -113,7 +113,7 @@ kunne det hjulpet for å ha styr på hvilke brancher som var nødvendig.
 Vi opprettet en develop branch som vi jobbet ut fra gjennom prosjektet. 
 Slik at den eneste “merge”-en som ble gjort med master var det ferdige produktet.  
 
-### Testing
+## Testing
 
 Det er implementert Jest snapshot tester for noen av komponentene. 
 Vi har ikke lagt stor fokus på testing ettersom det var mange 
