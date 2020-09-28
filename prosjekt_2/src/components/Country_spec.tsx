@@ -89,6 +89,7 @@ function Country_spec(){
     return(
       <div>
       <div className = "temaKnapper">
+    
        <button className= "knappDark" onClick={() => {
          if (themeContext.theme === 'light'){
            themeContext.setTheme('dark');
@@ -107,13 +108,16 @@ function Country_spec(){
         }
       }}>Bytt tema 2</button>
 
+
       <button className = "tittel" onClick={() => {
          if (themeContext.theme === 'light'){
            themeContext.setTheme('dark');
          }else{
            themeContext.setTheme('light');
          }
-       }}>Bytt tema 3</button> </div>
+       }}>Bytt tema 3</button>
+
+       </div>
 
       <div className="content_box">
 
