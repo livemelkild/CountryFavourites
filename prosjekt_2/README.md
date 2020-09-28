@@ -145,6 +145,7 @@ Installs all packages that are needed for the project.
 
 ### `npm start`
 
+Remember to be in the correct package: prosjekt-2/prosjekt_2
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
