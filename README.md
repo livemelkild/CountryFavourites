@@ -1,1 +1,1 @@
-# Klikk deg videre inn på prosjekt-2 for å lese readeMe!
+# Klikk deg videre inn på prosjekt_2 for å lese readeMe!
